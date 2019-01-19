@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="235dp"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:background="@color/colorPrimaryDark"
+        >
+
+
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Inte så jävla svårt att förstå detta skitspel, spela det bara herregud det är inte svårt, jävla soppa."
+              android:layout_margin="25dp" android:textSize="18sp" app:fontFamily="@font/antic_slab"
+              android:textColor="@color/cardview_dark_background"/>
+    <ImageButton
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="40dp"
+            android:padding="5dp"
+            android:background="@drawable/ic_keyboard_arrow_left_black_24dp"
+            android:id="@+id/back_button_card_1"/>
+
+
+
+</LinearLayout>

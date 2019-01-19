@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+              android:layout_height="235dp"
+              android:orientation="vertical"
+              android:padding="5dp"
+              android:background="@color/colorPrimaryDark">
+
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Spelet är helt enkelt fett jävla jul, så sätt igång och spela, om du inte vet hur, klicka på 'hur man spelar' för mer info"
+              android:textColor="@color/cardview_dark_background"
+              android:textSize="18sp" app:fontFamily="@font/antic_slab"
+              android:layout_margin="25dp"/>
+
+    <ImageButton android:layout_width="35dp"
+                 android:layout_height="35dp"
+                 android:layout_marginTop="20dp"
+                 android:padding="5dp"
+                 android:background="@drawable/ic_keyboard_arrow_left_black_24dp"
+                 android:id="@+id/back_card_2"/>
+
+</LinearLayout>

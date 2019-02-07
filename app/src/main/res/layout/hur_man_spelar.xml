@@ -3,26 +3,39 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="235dp"
+        android:layout_height="315dp"
         android:orientation="vertical"
         android:padding="5dp"
         android:background="@color/colorPrimaryDark"
         >
 
 
+    <TextView
+            android:text="Hur spelar man?"
+            android:layout_width="399dp"
+            android:layout_marginHorizontal="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView3" android:textSize="24sp"
+            app:fontFamily="@font/antic_slab" android:textColor="@android:color/black"
+            android:textAllCaps="false"/>
+    <ImageView
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content" app:srcCompat="@drawable/ic_help_black_24dp"
+            android:id="@+id/imageView3"/>
+
     <TextView android:layout_width="wrap_content"
               android:layout_height="wrap_content"
-              android:text="Inte så jävla svårt att förstå detta skitspel, spela det bara herregud det är inte svårt, jävla soppa."
-              android:layout_margin="25dp" android:textSize="18sp" app:fontFamily="@font/antic_slab"
+              android:text="Välj en text i textmenyn, sedan dycker lite information  om texten upp. Välj sedan 'spela' och ett ord eller en mening dycker upp, där ska ett ord ska skrivas som följer beskriviningen. Tillslut kommer en text upp där de valda orden är instatta och det blir en fullkomlig klar text."
+              android:layout_margin="5dp"
+              android:textSize="18sp" app:fontFamily="@font/antic_slab"
               android:textColor="@color/cardview_dark_background"/>
     <ImageButton
-            android:layout_width="35dp"
+            android:layout_width="34dp"
             android:layout_height="35dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="20dp"
             android:padding="5dp"
             android:background="@drawable/ic_keyboard_arrow_left_black_24dp"
             android:id="@+id/back_button_card_1"/>
-
-
 
 </LinearLayout>

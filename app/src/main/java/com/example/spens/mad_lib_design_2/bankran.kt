@@ -1,15 +1,21 @@
 package com.example.spens.mad_lib_design_2
 
+import android.content.Context
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
+import android.view.WindowManager
+import android.view.inputmethod.InputMethodManager
 import kotlinx.android.synthetic.main.activity_bankran.*
+import android.app.Activity
+import android.graphics.PorterDuff
+import android.view.MotionEvent
+
 
 class bankran : AppCompatActivity() {
 
-    var calc_procent_counter = 0
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,48 +23,14 @@ class bankran : AppCompatActivity() {
         setContentView(R.layout.activity_bankran)
 
 
-       /* fun rating_click() {
-            like_button.setOnClickListener{
-                rating_variables.total_clicks++
-                rating_variables.total_likes++
-                like_button.isClickable = false
-                Log.d("total_likes", rating_variables.total_likes.toString())
-                Log.d("total_ratings", rating_variables.total_clicks.toString())
-            }
-            dislike_button.setOnClickListener {
-                rating_variables.total_clicks++
-                rating_variables.total_dislikes++
-                dislike_button.isClickable = false
-                Log.d("dislike", rating_variables.total_dislikes.toString())
-                Log.d("total_ratings", rating_variables.total_clicks.toString())
-
-            }
-        }
-
-     fun calc_procent(){
-        rating_variables.procent_likes = (rating_variables.total_likes / rating_variables.total_clicks)*100
-        rating_variables.procent_dislikes = (rating_variables.total_dislikes / rating_variables.total_clicks)*100
-        Log.d("procent_likes", rating_variables.procent_likes.toString())
-        Log.d("procent_dislikes", rating_variables.procent_dislikes.toString())
-
-
-    }*/
-
         back_button_bankrån.setOnClickListener {
             array_bankrån = arrayOf("Adjektiv som slutar på: a", "Siffra", "Tidsenhet","Siffra","Dåligt artistnamn","Superhjälte","Verb som slutar på: ar","Känt citat","Namn på hundvalp","Verb som slutar på: a","Kroppsdel","Skurk","Vapen i plural","Siffra","Tidsenhet","Siffra","Substantiv i plural","Substantiv i plural","Fordon som slutar på: n","Geografisk plats","Högtid","")
             val intent = Intent(this, choose_text::class.java)
             startActivity(intent)
 
         }
-        calc_procent_counter++
-        if(calc_procent_counter == 1) {
-            //calc_procent()
-        }
 
-
-        antal_ord_bankrån.setText("Ord:" + " " + array_bankrån.size)
-        //procent_like.setText(rating_variables.procent_likes.toString()+ "%")
-        //procent_dislike.setText(rating_variables.procent_dislikes.toString()+"%")
+        antal_ord_bankrån.setText("Textlängd: Lång")
         var counter = 0
 
         spela_button_bankrån.setOnClickListener {
@@ -67,13 +39,10 @@ class bankran : AppCompatActivity() {
             spela_button_bankrån.visibility = View.INVISIBLE
             desc_text_bankrån.setText(array_bankrån[counter])
             antal_ord_bankrån.visibility = View.INVISIBLE
-            procent_dislike.visibility = View.INVISIBLE
-            procent_like.visibility = View.INVISIBLE
-            like_button.visibility = View.INVISIBLE
-            dislike_button.visibility = View.INVISIBLE
-            like_image.visibility = View.INVISIBLE
-            dislike_image.visibility = View.INVISIBLE
-
+            procent_dislike_bankrån.visibility = View.INVISIBLE
+            procent_like_bankrån.visibility = View.INVISIBLE
+            like_image_bankrån.visibility = View.INVISIBLE
+            dislike_image_bankrån.visibility = View.INVISIBLE
 
 
             counter++
@@ -88,6 +57,7 @@ class bankran : AppCompatActivity() {
                 input_text_bankrån.setText("")
 
 
+
             } else {
                 counter++
             }
@@ -97,15 +67,41 @@ class bankran : AppCompatActivity() {
                 desc_text_bankrån.visibility = View.INVISIBLE
                 confirm_button_bankrån.visibility = View.INVISIBLE
                 input_text_bankrån.visibility = View.INVISIBLE
-                dislike_button.visibility = View.VISIBLE
-                like_button.visibility = View.VISIBLE
+                tips_text_banrån.visibility = View.INVISIBLE
+                tips_title_bankrån.visibility = View.INVISIBLE
+                continue_button.visibility = View.VISIBLE
                 array_bankrån = arrayOf("Adjektiv som slutar på: a", "Siffra", "Tidsenhet", "Siffra", "Dåligt artistnamn", "Superhjälte", "Verb som slutar på: ar", "Känt citat", "Namn på hundvalp", "Verb som slutar på: a", "Kroppsdel", "Skurk", "Vapen i plural", "Siffra", "Tidsenhet", "Siffra", "Substantiv i plural", "Substantiv i plural som slutar på:a", "Fordon som slutar på: n", "Geografisk plats", "Högtid", "")
-                //rating_click()
-                //calc_procent()
+
+                val imm = getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
+                imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY,0)
+
+
+                continue_button.setOnClickListener {
+                    val intent = Intent(this, continue_screen_bankran::class.java)
+                    startActivity(intent)
+                }
+
+
             }
 
 
         }
 
+    }
+
+    fun buttonEffect(button: View) {
+        button.setOnTouchListener { v, event ->
+            when (event.action) {
+                MotionEvent.ACTION_DOWN -> {
+                    v.background.setColorFilter(resources.getColor(R.color.abc_hint_foreground_material_light), PorterDuff.Mode.SRC_ATOP)
+                    v.invalidate()
+                }
+                MotionEvent.ACTION_UP -> {
+                    v.background.clearColorFilter()
+                    v.invalidate()
+                }
+            }
+            false
+        }
     }
 }

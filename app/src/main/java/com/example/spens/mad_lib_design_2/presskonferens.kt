@@ -1,9 +1,13 @@
 package com.example.spens.mad_lib_design_2
 
+import android.app.Activity
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.view.inputmethod.InputMethodManager
+import kotlinx.android.synthetic.main.activity_bankran.*
+import kotlinx.android.synthetic.main.activity_jobbintervju.*
 import kotlinx.android.synthetic.main.activity_presskonferens.*
 
 class presskonferens : AppCompatActivity() {
@@ -11,6 +15,7 @@ class presskonferens : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_presskonferens)
+        array_presskonferens = arrayOf("Namn på en tecknad figur", "Tidsenhet", "Beskrivning på en person","Siffra", "Mätenhet", "Färg","Siffra","Tidsenhet","Geografisk plats", "Substantiv", "Kroppsdel","Namn på känd person","Högtid","Årtal","Namn på känd plats", "Substantiv i singular", "Kroppsdel i best.form","Siffra","Historisk person", "Resturang", "Siffra","Tidsenhet","")
 
 
         back_button_presskonferns.setOnClickListener {
@@ -27,6 +32,7 @@ class presskonferens : AppCompatActivity() {
             confirm_button_presskonferns.visibility = View.VISIBLE
             spela_button_presskonferns.visibility = View.INVISIBLE
             desc_text_presskonferns.setText(array_presskonferens[counter_presskonferens])
+            textlängd_presskonferens.visibility = View.INVISIBLE
             counter_presskonferens++
         }
 
@@ -49,9 +55,20 @@ class presskonferens : AppCompatActivity() {
                 desc_text_presskonferns.visibility = View.INVISIBLE
                 confirm_button_presskonferns.visibility = View.INVISIBLE
                 input_text_presskonferns.visibility = View.INVISIBLE
+                continue_button_presskonferens.visibility = View.VISIBLE
                 array_presskonferens = arrayOf("Namn på en tecknad figur", "Tidsenhet", "Beskrivning på en person","Siffra", "Mätenhet", "Färg","Siffra","Tidsenhet","Geografisk plats", "Substantiv", "Kroppsdel","Namn på känd person","Högtid","Årtal","Namn på känd plats", "Substantiv i singular", "Kroppsdel i best.form","Siffra","Historisk person", "Resturang", "Siffra","Tidsenhet","")
+                tips_text_presskonferens.visibility = View.INVISIBLE
+                tips_title_presskonferens.visibility = View.INVISIBLE
 
+                val imm = getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
+                imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY,0)
+
+                continue_button_presskonferens.setOnClickListener {
+                    val intent = Intent(this, continue_screen_bankran::class.java)
+                    startActivity(intent)
+                }
             }
+
 
         }
 

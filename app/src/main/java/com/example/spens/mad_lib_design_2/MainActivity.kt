@@ -2,9 +2,11 @@ package com.example.spens.mad_lib_design_2
 
 import android.app.Dialog
 import android.content.Intent
+import android.graphics.PorterDuff
 import android.graphics.drawable.AnimationDrawable
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MotionEvent
 import android.view.View
 import android.view.Window
 import android.widget.Button
@@ -15,26 +17,16 @@ import kotlinx.android.synthetic.main.activity_main.view.*
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var btn: Button
+    lateinit var btn: ImageButton
     lateinit var myDialog: Dialog
     lateinit var back: ImageButton
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
-        sound_off_start.setOnClickListener {
-            if(sound_off_start.visibility == View.VISIBLE) {
-                sound_on_start.visibility = View.VISIBLE
-                sound_off_start.visibility = View.INVISIBLE
-            }
-            else{
-                sound_off_start.visibility = View.VISIBLE
-                sound_on_start.visibility = View.INVISIBLE
-            }
-        }
-
+        buttonEffect(kör_button)
 
 
         kör_button.setOnClickListener {
@@ -44,12 +36,12 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        btn = findViewById<View>(R.id.hur_man_spelar) as Button
+        btn = findViewById<View>(R.id.hur_man_spelar) as ImageButton
         btn.setOnClickListener {
             ShowDialog_1()
         }
 
-        btn = findViewById<View>(R.id.om_spelet) as Button
+        btn = findViewById<View>(R.id.om_spelet) as ImageButton
         btn.setOnClickListener {
             ShowDialog_2()
         }
@@ -79,6 +71,22 @@ class MainActivity : AppCompatActivity() {
         }
         myDialog.show()
 
+    }
+
+    fun buttonEffect(button: View) {
+        button.setOnTouchListener { v, event ->
+            when (event.action) {
+                MotionEvent.ACTION_DOWN -> {
+                    v.background.setColorFilter(resources.getColor(R.color.colorPrimaryDark), PorterDuff.Mode.SRC_ATOP)
+                    v.invalidate()
+                }
+                MotionEvent.ACTION_UP -> {
+                    v.background.clearColorFilter()
+                    v.invalidate()
+                }
+            }
+            false
+        }
     }
 }
 

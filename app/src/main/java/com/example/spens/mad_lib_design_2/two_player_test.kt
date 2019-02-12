@@ -1,9 +1,6 @@
 package com.example.spens.mad_lib_design_2
 
-import android.content.Intent
-import android.graphics.Color
 import android.graphics.PorterDuff
-import android.graphics.drawable.Drawable
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -46,21 +43,21 @@ class two_player_test : AppCompatActivity() {
             in_text_test2.visibility = View.INVISIBLE
             spela_test.visibility = View.INVISIBLE
             desc_test.visibility = View.VISIBLE
-            vilken_spelare.visibility = View.VISIBLE
+            //vilken_spelare_dejt.visibility = View.VISIBLE
             input_nästa_test.visibility = View.VISIBLE
             nästa_button_test.visibility = View.VISIBLE
-            vilken_spelare.text = spelare1
+           // vilken_spelare_dejt.text = spelare1
             desc_test.text = array_desc_1[0]
             counter1++
         }
 
         fort.setOnClickListener {
             desc_test.visibility = View.VISIBLE
-            vilken_spelare.visibility = View.VISIBLE
+            //vilken_spelare_dejt.visibility = View.VISIBLE
             input_nästa_test.visibility = View.VISIBLE
             nästa_button_test.visibility = View.VISIBLE
             desc_test.text = array_desc_2[0]
-            vilken_spelare.text = spelare2
+            //vilken_spelare_dejt.text = spelare2
             counter1++
             counter2++
         }
@@ -89,15 +86,16 @@ class two_player_test : AppCompatActivity() {
             if(counter1 == array_desc_1.size) {
                 fort.visibility = View.VISIBLE
                 input_nästa_test.visibility = View.INVISIBLE
-                vilken_spelare.text = spelare2 + "s tur"
+                //vilken_spelare_dejt.text = spelare2 + "s tur"
 
             }
 
 
             if (counter1 > array_desc_1.size) {
                 input_nästa_test.visibility = View.VISIBLE
+                fort.visibility = View.INVISIBLE
                 Log.d("Signal","2")
-                vilken_spelare.text = spelare2
+                //vilken_spelare_dejt.text = spelare2
                 desc_test.text = array_desc_2[counter2]
                 array_desc_2[counter2-1] = input_nästa_test.text.toString()
                 counter2++
@@ -108,8 +106,7 @@ class two_player_test : AppCompatActivity() {
                 input_nästa_test.setText("")
 
             }
-
-
+            
             if(counter2 == array_desc_2.size){
                 nästa_button_test.visibility = View.INVISIBLE
                 input_nästa_test.visibility = View.INVISIBLE
@@ -117,7 +114,6 @@ class two_player_test : AppCompatActivity() {
                 text_story.setText(textStory_test)
                 array_desc_1 = arrayOf("Substantiv","Verb","Fordon","Sport","siffra","")
                 array_desc_2 = arrayOf("Namn","Siffra","skostorlek","siffra","")
-
 
             }
         }

@@ -21,10 +21,13 @@ class bankran : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_bankran)
+        array_bankrån = arrayOf("Adjektiv som slutar på: a", "Siffra", "Tidsenhet","Siffra","Dåligt artistnamn","Superhjälte","Verb som slutar på: ar","Känt citat","Namn på hundvalp","Verb som slutar på: a","Kroppsdel","Skurk","Vapen i plural","Siffra","Tidsenhet","Siffra","Substantiv i plural","Substantiv i plural","Fordon som slutar på: n","Geografisk plats","Högtid","")
 
+
+        buttonEffect(spela_button_bankrån)
 
         back_button_bankrån.setOnClickListener {
-            array_bankrån = arrayOf("Adjektiv som slutar på: a", "Siffra", "Tidsenhet","Siffra","Dåligt artistnamn","Superhjälte","Verb som slutar på: ar","Känt citat","Namn på hundvalp","Verb som slutar på: a","Kroppsdel","Skurk","Vapen i plural","Siffra","Tidsenhet","Siffra","Substantiv i plural","Substantiv i plural","Fordon som slutar på: n","Geografisk plats","Högtid","")
+            //array_bankrån = arrayOf("Adjektiv som slutar på: a", "Siffra", "Tidsenhet","Siffra","Dåligt artistnamn","Superhjälte","Verb som slutar på: ar","Känt citat","Namn på hundvalp","Verb som slutar på: a","Kroppsdel","Skurk","Vapen i plural","Siffra","Tidsenhet","Siffra","Substantiv i plural","Substantiv i plural","Fordon som slutar på: n","Geografisk plats","Högtid","")
             val intent = Intent(this, choose_text::class.java)
             startActivity(intent)
 
@@ -43,6 +46,7 @@ class bankran : AppCompatActivity() {
             procent_like_bankrån.visibility = View.INVISIBLE
             like_image_bankrån.visibility = View.INVISIBLE
             dislike_image_bankrån.visibility = View.INVISIBLE
+
 
 
             counter++

@@ -37,7 +37,7 @@ class choose_text : AppCompatActivity() {
                 kommer_snart1.visibility = View.INVISIBLE
                 spelarläge.setText("2 Spelare")
                 test_button.visibility = View.VISIBLE
-                test_2_button.visibility = View.VISIBLE
+                dejt_button.visibility = View.VISIBLE
 
             }
             else {
@@ -51,7 +51,7 @@ class choose_text : AppCompatActivity() {
                 kommer_snart1.visibility = View.VISIBLE
                 spelarläge.setText("1 Spelare")
                 test_button.visibility = View.INVISIBLE
-                test_2_button.visibility = View.INVISIBLE
+                dejt_button.visibility = View.INVISIBLE
 
             }
         }
@@ -80,6 +80,10 @@ class choose_text : AppCompatActivity() {
         }
         test_button.setOnClickListener {
             val intent = Intent(this, two_player_test::class.java)
+            startActivity(intent)
+        }
+        dejt_button.setOnClickListener {
+            val intent = Intent(this, dejt::class.java)
             startActivity(intent)
         }
 

@@ -2,8 +2,10 @@ package com.example.spens.mad_lib_design_2
 
 import android.app.Activity
 import android.content.Intent
+import android.graphics.PorterDuff
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MotionEvent
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import kotlinx.android.synthetic.main.activity_jobbintervju.*
@@ -14,6 +16,8 @@ class jobbintervju : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_jobbintervju)
+
+        buttonEffect(spela_button_jobbintervju)
 
 
         back_button_jobbintervju.setOnClickListener {
@@ -145,10 +149,22 @@ class jobbintervju : AppCompatActivity() {
                     val intent = Intent(this, continue_screen_bankran::class.java)
                     startActivity(intent)
                 }
-
             }
-
-
+        }
+    }
+    fun buttonEffect(button: View) {
+        button.setOnTouchListener { v, event ->
+            when (event.action) {
+                MotionEvent.ACTION_DOWN -> {
+                    v.background.setColorFilter(resources.getColor(R.color.colorPrimaryDark), PorterDuff.Mode.SRC_ATOP)
+                    v.invalidate()
+                }
+                MotionEvent.ACTION_UP -> {
+                    v.background.clearColorFilter()
+                    v.invalidate()
+                }
+            }
+            false
         }
     }
 }

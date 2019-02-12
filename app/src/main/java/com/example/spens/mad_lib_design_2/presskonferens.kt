@@ -18,6 +18,7 @@ class presskonferens : AppCompatActivity() {
         array_presskonferens = arrayOf("Namn på en tecknad figur", "Tidsenhet", "Beskrivning på en person","Siffra", "Mätenhet", "Färg","Siffra","Tidsenhet","Geografisk plats", "Substantiv", "Kroppsdel","Namn på känd person","Högtid","Årtal","Namn på känd plats", "Substantiv i singular", "Kroppsdel i best.form","Siffra","Historisk person", "Resturang", "Siffra","Tidsenhet","")
 
 
+
         back_button_presskonferns.setOnClickListener {
             array_presskonferens = arrayOf("Namn på en tecknad figur", "Tidsenhet", "Beskrivning på en person","Siffra", "Mätenhet", "Färg","Siffra","Tidsenhet","Geografisk plats", "Substantiv", "Kroppsdel","Namn på känd person","Högtid","Årtal","Namn på känd plats", "Substantiv i singular", "Kroppsdel i best.form","Siffra","Historisk person", "Resturang", "Siffra","Tidsenhet","")
             val intent = Intent(this, choose_text::class.java)

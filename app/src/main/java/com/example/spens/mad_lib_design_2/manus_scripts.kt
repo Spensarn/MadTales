@@ -26,12 +26,12 @@ var textstory_företagspitch = "Hejsan jag heter " + array_företagspitch[0]+ " 
 var array_dejt_p2 = arrayOf("Adjektiv","Verb","Resturang","Siffra","Längenhet","Adjektiv","Siffra","Substantiv i plural","Kroppsdel")
 var array_dejt_p1 = arrayOf("Fordon i best form","Substantiv","Klädesplagg","Vätska","Adjektiv","Land","Star Wars karaktär","Substantiv","Tecknad figur")
 
-var textStory_dejt = "Person 1: Hej! trevligt att träffas," + dejt_class.spelare2 + " var det va? Jag heter " + dejt_class.spelare1 + ", vad sägs som att gå in?\n" +
-        "Person 2: Hej, ja det låter bra, förlåt om jag var lite sen, men på vägen till "+ array_dejt_p1[0] + " kom jag på att jag hade glömt min "+ array_dejt_p1[1] + ", och behöver verkligen den ikväll.\n " +
-        "Person 1: Ingen fara, du ser väldigt "+ array_dejt_p2[0] + " ut ikväll! När jag väntade på dig passade jag på att "+ array_dejt_p2[1] + " lite för att få bort nerverna, är faktiskt lite nervös inför den här dejten.\n " +
-        "Person 2: Jag är också lite nervös, men detta ska bli kul, köpte faktiskt den här "+ array_dejt_p1[2] + " bara för ikväll. Jag tycker vi går till restaurangen nu, börjar bli kallt här ute\n " +
-        "Person 1: Ja självklart. Har bokat bord på "+ array_dejt_p2[2] + ", tänkte att vi skulle slå på stort ikväll. Det är inte så långt, ligger bara "+ array_dejt_p2[3]+ " " + array_dejt_p2[4] + " härifrån.\n" +
-        "Person 2: Oj vilken fin restaurang, har aldrig varit här förut. Ska vi beställa något att dricka? Jag tar gärna ett glas "+ array_dejt_p1[3] + ".\n " +
-        "Person 1: Det låter "+ array_dejt_p2[5] + ", tar nog också det. Så... berätta lite om dig själv? \n " +
-        "Person 2: Jag kommer från "+ array_dejt_p1[5] + ", min pappa är "+ array_dejt_p1[6] + " men jag känner inte min mamma. Jag gillar att samla på "+ array_dejt_p1[7] + " och jobbar som assistent åt "+ array_dejt_p1[9] + ".\n" +
-        "Person 1: Då har vi ett problem, jag har nämligen besöksförbud minst "+ array_dejt_p2[6] + " meter ifrån "+ array_dejt_p1[9] + " efter att jag kastade några "+ array_dejt_p2[7] + " och bröt "+ array_dejt_p2[8] + " på stackaren efter en dålig dejt vi hade. Så jag tror jag får lov att säga hejdå, detta kommer nog inte funka mellan oss. Hejdå"
+var textStory_dejt = dejt_class.spelare1+ ": Hej! trevligt att träffas," + dejt_class.spelare2 + " var det va? Jag heter " + dejt_class.spelare1 + ", vad sägs som att gå in?\n" +
+        dejt_class.spelare2 + ": Hej, ja det låter bra, förlåt om jag var lite sen, men på vägen till "+ array_dejt_p1[0] + " kom jag på att jag hade glömt min "+ array_dejt_p1[1] + ", och behöver verkligen den ikväll.\n " +
+        dejt_class.spelare1+ ": Ingen fara, du ser väldigt "+ array_dejt_p2[0] + " ut ikväll! När jag väntade på dig passade jag på att "+ array_dejt_p2[1] + " lite för att få bort nerverna, är faktiskt lite nervös inför den här dejten.\n " +
+        dejt_class.spelare2+ ": Jag är också lite nervös, men detta ska bli kul, köpte faktiskt den här "+ array_dejt_p1[2] + " bara för ikväll. Jag tycker vi går till restaurangen nu, börjar bli kallt här ute\n " +
+        dejt_class.spelare1+ ": Ja självklart. Har bokat bord på "+ array_dejt_p2[2] + ", tänkte att vi skulle slå på stort ikväll. Det är inte så långt, ligger bara "+ array_dejt_p2[3]+ " " + array_dejt_p2[4] + " härifrån.\n" +
+        dejt_class.spelare2+ ": Oj vilken fin restaurang, har aldrig varit här förut. Ska vi beställa något att dricka? Jag tar gärna ett glas "+ array_dejt_p1[3] + ".\n " +
+        dejt_class.spelare1+ ": Det låter "+ array_dejt_p2[5] + ", tar nog också det. Så... berätta lite om dig själv? \n " +
+        dejt_class.spelare2+ ": Jag kommer från "+ array_dejt_p1[5] + ", min pappa är "+ array_dejt_p1[6] + " men jag känner inte min mamma. Jag gillar att samla på "+ array_dejt_p1[7] + " och jobbar som assistent åt "+ array_dejt_p1[8] + ".\n" +
+        "Person 1: Då har vi ett problem, jag har nämligen besöksförbud minst "+ array_dejt_p2[6] + " meter ifrån "+ array_dejt_p1[8] + " efter att jag kastade några "+ array_dejt_p2[7] + " och bröt "+ array_dejt_p2[8] + " på stackaren efter en dålig dejt vi hade. Så jag tror jag får lov att säga hejdå, detta kommer nog inte funka mellan oss. Hejdå"

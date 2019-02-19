@@ -1,6 +1,8 @@
 package com.example.spens.mad_lib_design_2
 
 import android.app.Activity
+import android.app.AlertDialog
+import android.content.DialogInterface
 import android.content.Intent
 import android.graphics.PorterDuff
 import android.support.v7.app.AppCompatActivity
@@ -47,8 +49,13 @@ class jobbintervju : AppCompatActivity() {
                 "Låt",
                 ""
             )
-            val intent = Intent(this, choose_text::class.java)
-            startActivity(intent)
+            AlertDialog.Builder(this)
+                .setMessage("Vill du avsluta? Ändringar kommer inte att sparas!")
+                .setCancelable(false)
+                .setPositiveButton("Yes",
+                    DialogInterface.OnClickListener { dialog, id -> this@jobbintervju.finish() })
+                .setNegativeButton("No", null)
+                .show()
 
         }
 
@@ -166,5 +173,15 @@ class jobbintervju : AppCompatActivity() {
             }
             false
         }
+    }
+
+    override fun onBackPressed() {
+        AlertDialog.Builder(this)
+            .setMessage("Vill du avsluta? Ändringar kommer inte att sparas!")
+            .setCancelable(false)
+            .setPositiveButton("Yes",
+                DialogInterface.OnClickListener { dialog, id -> this@jobbintervju.finish() })
+            .setNegativeButton("No", null)
+            .show()
     }
 }

@@ -1,6 +1,8 @@
 package com.example.spens.mad_lib_design_2
 
 import android.app.Activity
+import android.app.AlertDialog
+import android.content.DialogInterface
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -21,8 +23,13 @@ class presskonferens : AppCompatActivity() {
 
         back_button_presskonferns.setOnClickListener {
             array_presskonferens = arrayOf("Namn på en tecknad figur", "Tidsenhet", "Beskrivning på en person","Siffra", "Mätenhet", "Färg","Siffra","Tidsenhet","Geografisk plats", "Substantiv", "Kroppsdel","Namn på känd person","Högtid","Årtal","Namn på känd plats", "Substantiv i singular", "Kroppsdel i best.form","Siffra","Historisk person", "Resturang", "Siffra","Tidsenhet","")
-            val intent = Intent(this, choose_text::class.java)
-            startActivity(intent)
+            AlertDialog.Builder(this)
+                .setMessage("Vill du avsluta? Ändringar kommer inte att sparas!")
+                .setCancelable(false)
+                .setPositiveButton("Yes",
+                    DialogInterface.OnClickListener { dialog, id -> this@presskonferens.finish() })
+                .setNegativeButton("No", null)
+                .show()
 
         }
 
@@ -73,5 +80,15 @@ class presskonferens : AppCompatActivity() {
 
         }
 
+    }
+
+    override fun onBackPressed() {
+        AlertDialog.Builder(this)
+            .setMessage("Vill du avsluta? Ändringar kommer inte att sparas!")
+            .setCancelable(false)
+            .setPositiveButton("Yes",
+                DialogInterface.OnClickListener { dialog, id -> this@presskonferens.finish() })
+            .setNegativeButton("No", null)
+            .show()
     }
 }

@@ -9,7 +9,11 @@ import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
 import kotlinx.android.synthetic.main.activity_bankran.*
 import android.app.Activity
+import android.app.AlertDialog
 import kotlinx.android.synthetic.main.activity_foretagspitch.*
+import android.content.DialogInterface
+
+
 
 
 class foretagspitch : AppCompatActivity() {
@@ -23,8 +27,18 @@ class foretagspitch : AppCompatActivity() {
 
         back_button_företagspitch.setOnClickListener {
             array_företagspitch = arrayOf("Namn", "Siffra","Grönsak på engelska", "Substantiv i singular","Verb","Butikskedja i plural","Land","Land","Siffra","Årtal","Hemsida","Namn på by","Låg siffra","Substantiv i plural","Hög siffra","Tidsenhet","Namn innehållande 3 boktsåver","Kändis","Kroppsdel i best form","Siffra","")
-            val intent = Intent(this, choose_text::class.java)
-            startActivity(intent)
+
+            AlertDialog.Builder(this)
+                .setMessage("Vill du avsluta? Ändringar kommer inte att sparas!")
+                .setCancelable(false)
+                .setPositiveButton("Yes",
+                    DialogInterface.OnClickListener { dialog, id -> this@foretagspitch.finish() })
+                .setNegativeButton("No", null)
+                .show()
+
+            //val intent = Intent(this, choose_text::class.java)
+            //startActivity(intent)
+
 
         }
 
@@ -77,12 +91,19 @@ class foretagspitch : AppCompatActivity() {
                     val intent = Intent(this, continue_screen_bankran::class.java)
                     startActivity(intent)
                 }
-
-
             }
-
 
         }
 
+    }
+
+    override fun onBackPressed() {
+        AlertDialog.Builder(this)
+            .setMessage("Vill du avsluta? Ändringar kommer inte att sparas!")
+            .setCancelable(false)
+            .setPositiveButton("Yes",
+                DialogInterface.OnClickListener { dialog, id -> this@foretagspitch.finish() })
+            .setNegativeButton("No", null)
+            .show()
     }
 }

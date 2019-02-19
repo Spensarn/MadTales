@@ -45,22 +45,17 @@
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="1.0"
             app:fontFamily="casual"/>
     <ImageButton
-            android:layout_width="33dp"
+            android:layout_width="35dp"
             android:background="@android:color/transparent"
             android:layout_height="38dp" app:srcCompat="@drawable/ic_info_black_24dp"
             android:id="@+id/om_spelet"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            app:layout_constraintTop_toTopOf="@+id/guideline"
-            android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.022"
-            app:layout_constraintVertical_bias="0.0"/>
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.022"
+            app:layout_constraintVertical_bias="0.462"/>
 
 
     <ImageButton
@@ -68,11 +63,11 @@
             android:background="@android:color/transparent"
             android:layout_height="wrap_content" app:srcCompat="@drawable/ic_help_black_24dp"
             android:id="@+id/hur_man_spelar"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
-            android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="@+id/guideline"
-            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginStart="8dp" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="8dp" app:layout_constraintHorizontal_bias="0.977"
-            app:layout_constraintVertical_bias="0.0"/>
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            app:layout_constraintHorizontal_bias="0.977" app:layout_constraintVertical_bias="0.467"/>
 
 </android.support.constraint.ConstraintLayout>

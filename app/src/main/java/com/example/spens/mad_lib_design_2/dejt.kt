@@ -34,21 +34,28 @@ class dejt : AppCompatActivity() {
         array_dejt_p1 = arrayOf("Fordon i best form","Substantiv","Klädesplagg i best form","Vätska","Adjektiv som kan beskriva mat","Land","Star Wars karaktär","Substantiv","Tecknad figur","")
 
             spela_button_dejt.setOnClickListener {
-                beskrivning_dejt.visibility = View.INVISIBLE
-                spelare1 =spelare1_dejt_input.text.toString()
-                spelare2 = spelare2_dejt_input.text.toString()
-                spelare1_dejt_input.visibility = View.INVISIBLE
-                tips_text_dejt.visibility = View.VISIBLE
-                tips_title_dejt.visibility = View.VISIBLE
-                spelare2_dejt_input.visibility = View.INVISIBLE
-                spela_button_dejt.visibility = View.INVISIBLE
-                desc_text_dejt.visibility = View.VISIBLE
-                vilken_spelare_dejt.visibility = View.VISIBLE
-                in_text_dejt.visibility = View.VISIBLE
-                nästa_button_dejt.visibility = View.VISIBLE
-                vilken_spelare_dejt.text = spelare1
-                desc_text_dejt.text = array_dejt_p2[0]
-                counter1++
+
+
+                if(spelare1_dejt_input.text.isEmpty() || spelare2_dejt_input.text.isEmpty()){
+                    Toast.makeText(this, "Alla fälten ska var ifyllda!", Toast.LENGTH_SHORT).show()
+                }else {
+
+                    beskrivning_dejt.visibility = View.INVISIBLE
+                    spelare1 = spelare1_dejt_input.text.toString()
+                    spelare2 = spelare2_dejt_input.text.toString()
+                    spelare1_dejt_input.visibility = View.INVISIBLE
+                    tips_text_dejt.visibility = View.VISIBLE
+                    tips_title_dejt.visibility = View.VISIBLE
+                    spelare2_dejt_input.visibility = View.INVISIBLE
+                    spela_button_dejt.visibility = View.INVISIBLE
+                    desc_text_dejt.visibility = View.VISIBLE
+                    vilken_spelare_dejt.visibility = View.VISIBLE
+                    in_text_dejt.visibility = View.VISIBLE
+                    nästa_button_dejt.visibility = View.VISIBLE
+                    vilken_spelare_dejt.text = spelare1
+                    desc_text_dejt.text = array_dejt_p2[0]
+                    counter1++
+                }
             }
 
             fortsätt_button_dejt.setOnClickListener {

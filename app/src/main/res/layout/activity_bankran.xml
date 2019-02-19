@@ -82,7 +82,7 @@
     <TextView
             android:layout_width="365dp"
             android:layout_height="594dp"
-            android:id="@+id/text_story_bankrån" android:textSize="14sp"
+            android:id="@+id/text_story_bankrån" android:textSize="16sp"
             android:layout_marginBottom="84dp"
             android:lineSpacingExtra="3dp"
             app:layout_constraintBottom_toBottomOf="parent"

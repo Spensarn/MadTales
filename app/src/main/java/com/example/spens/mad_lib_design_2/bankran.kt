@@ -9,6 +9,8 @@ import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
 import kotlinx.android.synthetic.main.activity_bankran.*
 import android.app.Activity
+import android.app.AlertDialog
+import android.content.DialogInterface
 import android.graphics.PorterDuff
 import android.view.MotionEvent
 
@@ -27,9 +29,15 @@ class bankran : AppCompatActivity() {
         buttonEffect(spela_button_bankrån)
 
         back_button_bankrån.setOnClickListener {
-            //array_bankrån = arrayOf("Adjektiv som slutar på: a", "Siffra", "Tidsenhet","Siffra","Dåligt artistnamn","Superhjälte","Verb som slutar på: ar","Känt citat","Namn på hundvalp","Verb som slutar på: a","Kroppsdel","Skurk","Vapen i plural","Siffra","Tidsenhet","Siffra","Substantiv i plural","Substantiv i plural","Fordon som slutar på: n","Geografisk plats","Högtid","")
-            val intent = Intent(this, choose_text::class.java)
-            startActivity(intent)
+            array_bankrån = arrayOf("Adjektiv som slutar på: a", "Siffra", "Tidsenhet","Siffra","Dåligt artistnamn","Superhjälte","Verb som slutar på: ar","Känt citat","Namn på hundvalp","Verb som slutar på: a","Kroppsdel","Skurk","Vapen i plural","Siffra","Tidsenhet","Siffra","Substantiv i plural","Substantiv i plural","Fordon som slutar på: n","Geografisk plats","Högtid","")
+
+            AlertDialog.Builder(this)
+                .setMessage("Vill du avsluta? Ändringar kommer inte att sparas!")
+                .setCancelable(false)
+                .setPositiveButton("Yes",
+                    DialogInterface.OnClickListener { dialog, id -> this@bankran.finish() })
+                .setNegativeButton("No", null)
+                .show()
 
         }
 
@@ -105,5 +113,14 @@ class bankran : AppCompatActivity() {
             }
             false
         }
+    }
+    override fun onBackPressed() {
+        AlertDialog.Builder(this)
+            .setMessage("Vill du avsluta? Ändringar kommer inte att sparas!")
+            .setCancelable(false)
+            .setPositiveButton("Yes",
+                DialogInterface.OnClickListener { dialog, id -> this@bankran.finish() })
+            .setNegativeButton("No", null)
+            .show()
     }
 }

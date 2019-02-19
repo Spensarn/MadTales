@@ -4,31 +4,34 @@
               android:layout_height="225dp"
               android:orientation="vertical"
               android:padding="5dp"
-              android:background="@color/colorPrimaryDark">
+              android:background="@color/cardview_dark_background">
 
     <TextView
             android:text="Om MadTales"
             android:layout_width="161dp"
             android:layout_marginHorizontal="120dp"
-            android:layout_height="wrap_content" android:id="@+id/textView5" android:textSize="24sp"
-            android:textColor="@android:color/black" app:fontFamily="@font/antic_slab"/>
+            android:layout_height="wrap_content"
+            android:id="@+id/textView5"
+            android:textSize="24sp"
+            app:fontFamily="@font/antic_slab"/>
     <ImageView
             android:layout_width="match_parent"
             android:layout_margin="10dp"
-            android:layout_height="wrap_content" app:srcCompat="@drawable/ic_info_black_24dp"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_info_black_24dp"
             android:id="@+id/imageView2"/>
     <TextView android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:text="MadTales är ett spel för alla, är du lite kreativ och har ett gott sinne för humor kan du eller do du spelar med få dig gott skratt"
-              android:textColor="@color/cardview_dark_background"
-              android:textSize="18sp" app:fontFamily="@font/antic_slab"
+              android:textSize="18sp"
+              app:fontFamily="@font/antic_slab"
               android:layout_margin="5dp"/>
 
     <ImageButton android:layout_width="35dp"
                  android:layout_height="35dp"
                  android:layout_marginTop="18dp"
                  android:padding="5dp"
-                 android:background="@drawable/ic_keyboard_arrow_left_black_24dp"
+                 android:background="@drawable/ic_keyboard_arrow_left_orange_24dp"
                  android:id="@+id/back_card_2"/>
 
 </LinearLayout>

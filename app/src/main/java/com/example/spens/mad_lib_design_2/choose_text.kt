@@ -7,7 +7,6 @@ import android.os.Bundle
 import android.util.Log
 import android.view.MotionEvent
 import android.view.View
-import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_choose_text.*
 
 class choose_text : AppCompatActivity() {
@@ -24,6 +23,7 @@ class choose_text : AppCompatActivity() {
         buttonEffect(jobbintervju_button)
         buttonEffect(företagspitch_button)
         buttonEffect(bankrån_button)
+        buttonEffect(jakt_button)
 
         sticky_switch.setOnClickListener{
             if(bool == true) {
@@ -33,8 +33,8 @@ class choose_text : AppCompatActivity() {
                 jobbintervju_button.visibility = View.INVISIBLE
                 företagspitch_button.visibility = View.INVISIBLE
                 bankrån_button.visibility = View.INVISIBLE
-                julspecial_button.visibility = View.INVISIBLE
-                kommer_snart1.visibility = View.INVISIBLE
+                jakt_button.visibility = View.INVISIBLE
+                reklam_button.visibility = View.INVISIBLE
                 spelarläge.setText("2 Spelare")
                 test_button.visibility = View.VISIBLE
                 dejt_button.visibility = View.VISIBLE
@@ -47,8 +47,8 @@ class choose_text : AppCompatActivity() {
                 jobbintervju_button.visibility = View.VISIBLE
                 företagspitch_button.visibility = View.VISIBLE
                 bankrån_button.visibility = View.VISIBLE
-                julspecial_button.visibility = View.VISIBLE
-                kommer_snart1.visibility = View.VISIBLE
+                jakt_button.visibility = View.VISIBLE
+                reklam_button.visibility = View.VISIBLE
                 spelarläge.setText("1 Spelare")
                 test_button.visibility = View.INVISIBLE
                 dejt_button.visibility = View.INVISIBLE
@@ -78,12 +78,22 @@ class choose_text : AppCompatActivity() {
             val intent = Intent(this, foretagspitch::class.java)
             startActivity(intent)
         }
+
+        jakt_button.setOnClickListener {
+            val intent = Intent(this, jakt::class.java)
+            startActivity(intent)
+        }
+
         test_button.setOnClickListener {
             val intent = Intent(this, two_player_test::class.java)
             startActivity(intent)
         }
         dejt_button.setOnClickListener {
             val intent = Intent(this, dejt::class.java)
+            startActivity(intent)
+        }
+        reklam_button.setOnClickListener {
+            val intent = Intent(this, reklam::class.java)
             startActivity(intent)
         }
 

@@ -15,46 +15,27 @@ import kotlinx.android.synthetic.main.activity_presskonferens.*
 
 class jobbintervju : AppCompatActivity() {
 
+    val random_generator = com.example.spens.mad_lib_design_2.random_generator()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_jobbintervju)
 
         buttonEffect(spela_button_jobbintervju)
 
+        random_generator.random_tips(tips_text_jobbintervju)
+
+        progressBar_jobbintervju.progress = 0
 
         back_button_jobbintervju.setOnClickListener {
-            array_jobbintervju = arrayOf(
-                " Skådespelare",
-                "Namn på en historisk figur",
-                "Typ av arbete",
-                "Något du säger när du är i knipa",
-                "Typ av spel",
-                "Yrke man hade förr i tiden",
-                "Tidsspann",
-                "Namn på företag",
-                "Siffra",
-                "Valuta",
-                "Något du säger när du blir chockad",
-                "Adjektiv",
-                "Siffra",
-                " Badrumsartikel i plural",
-                "Djur i plural",
-                "Typ av släkting",
-                "Namn",
-                "Siffra",
-                "Substantiv i plural",
-                "Siffra",
-                "Kroppsdel: best form",
-                " Tidsspan",
-                "Låt",
-                ""
-            )
+            array_jobbintervju = arrayOf(" Skådespelare","Namn på en historisk figur","Typ av arbete","Något du säger när du är i knipa","Typ av spel","Yrke man hade förr i tiden","Tidsspann","Namn på företag","Siffra","Valuta","Något du säger när du blir chockad","Adjektiv","Siffra"," Badrumsartikel i plural","Djur i plural","Typ av släkting","Namn","Siffra","Substantiv i plural","Siffra","Kroppsdel i bestämd form"," Tidsspan","Låt","")
+
             AlertDialog.Builder(this)
                 .setMessage("Vill du avsluta? Ändringar kommer inte att sparas!")
                 .setCancelable(false)
-                .setPositiveButton("Yes",
+                .setPositiveButton("Ja",
                     DialogInterface.OnClickListener { dialog, id -> this@jobbintervju.finish() })
-                .setNegativeButton("No", null)
+                .setNegativeButton("Nej", null)
                 .show()
 
         }
@@ -62,6 +43,7 @@ class jobbintervju : AppCompatActivity() {
         var counter = 0
 
         spela_button_jobbintervju.setOnClickListener {
+            progressBar_jobbintervju.visibility = View.VISIBLE
             input_text_jobbintervju.visibility = View.VISIBLE
             confirm_button_jobbintervju.visibility = View.VISIBLE
             spela_button_jobbintervju.visibility = View.INVISIBLE
@@ -72,6 +54,7 @@ class jobbintervju : AppCompatActivity() {
 
         confirm_button_jobbintervju.setOnClickListener {
             if (counter < array_jobbintervju.size) {
+                progressBar_jobbintervju.progress = (progressBar_jobbintervju.progress+4)%100
                 desc_text_jobbintervju.setText(array_jobbintervju[counter])
                 array_jobbintervju[counter - 1] = input_text_jobbintervju.getText().toString()
                 counter++
@@ -114,36 +97,13 @@ class jobbintervju : AppCompatActivity() {
             }
 
             if (counter == array_jobbintervju.size) {
+                progressBar_jobbintervju.visibility = View.INVISIBLE
                 text_story_jobbintervju.setText(textStory_jobbintervju)
                 desc_text_jobbintervju.visibility = View.INVISIBLE
                 confirm_button_jobbintervju.visibility = View.INVISIBLE
                 input_text_jobbintervju.visibility = View.INVISIBLE
-                array_jobbintervju = arrayOf(
-                    " Skådespelare",
-                    "Namn på en historisk figur",
-                    "Typ av arbete",
-                    "Något du säger när du är i knipa",
-                    "Typ av spel",
-                    "Yrke man hade förr i tiden",
-                    "Tidsspann",
-                    "Namn på företag",
-                    "Siffra",
-                    "Valuta",
-                    "Något du säger när du blir chockad",
-                    "Adjektiv",
-                    "Siffra",
-                    " Badrumsartikel i plural",
-                    "Djur i plural",
-                    "Typ av släkting",
-                    "Namn",
-                    "Siffra",
-                    "Substantiv i plural",
-                    "Siffra",
-                    "Kroppsdel: best form",
-                    " Tidsspan",
-                    "Låt",
-                    ""
-                )
+                array_jobbintervju = arrayOf(" Skådespelare","Namn på en historisk figur","Typ av arbete","Något du säger när du är i knipa","Typ av spel","Yrke man hade förr i tiden","Tidsspann","Namn på företag","Siffra","Valuta","Något du säger när du blir chockad","Adjektiv","Siffra"," Badrumsartikel i plural","Djur i plural","Typ av släkting","Namn","Siffra","Substantiv i plural","Siffra","Kroppsdel i bestämd form"," Tidsspan","Låt","")
+
                 continue_button_jobbinervju.visibility = View.VISIBLE
                 tips_text_jobbintervju.visibility = View.INVISIBLE
                 tips_title_jobbintervju.visibility = View.INVISIBLE
@@ -179,9 +139,9 @@ class jobbintervju : AppCompatActivity() {
         AlertDialog.Builder(this)
             .setMessage("Vill du avsluta? Ändringar kommer inte att sparas!")
             .setCancelable(false)
-            .setPositiveButton("Yes",
+            .setPositiveButton("Ja",
                 DialogInterface.OnClickListener { dialog, id -> this@jobbintervju.finish() })
-            .setNegativeButton("No", null)
+            .setNegativeButton("Nej", null)
             .show()
     }
 }

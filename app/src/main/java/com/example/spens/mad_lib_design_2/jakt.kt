@@ -17,12 +17,16 @@ import kotlinx.android.synthetic.main.activity_jakt.*
 
 class jakt : AppCompatActivity() {
 
+    val random_generator = com.example.spens.mad_lib_design_2.random_generator()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_jakt)
         array_jakt = arrayOf("Påhittat långt namn","Adjektiv som slutar på: a","Litet djur i best form","Känd byggnad","Siffra","Föremål som kan användas som vapen","Siffra","Barnleksak i plural","Fånigt smaknamn","Tidsenhet","Kroppsdel i best form","Siffra","Tidsenhet","Bakverk","Svordom ett barn skulle säga","Verb som slutar på: a","Något du säger när du blir förvånad","")
 
+        random_generator.random_tips(tips_text_jakt)
+
+        progressBar_jakt.progress = 0
 
         back_button_jakt.setOnClickListener {
             array_jakt = arrayOf("Påhittat långt namn","Adjektiv som slutar på: a","Litet djur i best form","Känd byggnad","Siffra","Föremål som kan användas som vapen","Siffra","Barnleksak i plural","Fånigt smaknamn","Tidsenhet","Kroppsdel i best form","Siffra","Tidsenhet","Bakverk","Svordom ett barn skulle säga","Verb som slutar på: a","Något du säger när du blir förvånad","")
@@ -30,9 +34,9 @@ class jakt : AppCompatActivity() {
             AlertDialog.Builder(this)
                 .setMessage("Vill du avsluta? Ändringar kommer inte att sparas!")
                 .setCancelable(false)
-                .setPositiveButton("Yes",
+                .setPositiveButton("Ja",
                     DialogInterface.OnClickListener { dialog, id -> this@jakt.finish() })
-                .setNegativeButton("No", null)
+                .setNegativeButton("Nej", null)
                 .show()
 
         }
@@ -41,6 +45,7 @@ class jakt : AppCompatActivity() {
         var counter = 0
 
         spela_button_jakt.setOnClickListener {
+            progressBar_jakt.visibility = View.VISIBLE
             input_text_jakt.visibility = View.VISIBLE
             confirm_button_jakt.visibility = View.VISIBLE
             spela_button_jakt.visibility = View.INVISIBLE
@@ -57,6 +62,7 @@ class jakt : AppCompatActivity() {
 
         confirm_button_jakt.setOnClickListener {
             if (counter < array_jakt.size) {
+                progressBar_jakt.progress = (progressBar_jakt.progress+5)%100
                 desc_text_jakt.setText(array_jakt[counter])
                 array_jakt[counter - 1] = input_text_jakt.getText().toString()
                 counter++
@@ -70,6 +76,7 @@ class jakt : AppCompatActivity() {
 
             if (counter == array_jakt.size) {
                 text_story_jakt.setText(textStory_jakt)
+                progressBar_jakt.visibility = View.INVISIBLE
                 desc_text_jakt.visibility = View.INVISIBLE
                 confirm_button_jakt.visibility = View.INVISIBLE
                 input_text_jakt.visibility = View.INVISIBLE
@@ -96,9 +103,9 @@ class jakt : AppCompatActivity() {
         AlertDialog.Builder(this)
             .setMessage("Vill du avsluta? Ändringar kommer inte att sparas!")
             .setCancelable(false)
-            .setPositiveButton("Yes",
+            .setPositiveButton("Ja",
                 DialogInterface.OnClickListener { dialog, id -> this@jakt.finish() })
-            .setNegativeButton("No", null)
+            .setNegativeButton("Nej", null)
             .show()
     }
 }

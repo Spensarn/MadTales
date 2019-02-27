@@ -9,26 +9,33 @@ import android.os.Bundle
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import kotlinx.android.synthetic.main.activity_bankran.*
+import kotlinx.android.synthetic.main.activity_jakt.*
 import kotlinx.android.synthetic.main.activity_jobbintervju.*
 import kotlinx.android.synthetic.main.activity_presskonferens.*
 
 class presskonferens : AppCompatActivity() {
 
+
+    val random_generator = com.example.spens.mad_lib_design_2.random_generator()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_presskonferens)
-        array_presskonferens = arrayOf("Namn på en tecknad figur", "Tidsenhet", "Beskrivning på en person","Siffra", "Mätenhet", "Färg","Siffra","Tidsenhet","Geografisk plats", "Substantiv", "Kroppsdel","Namn på känd person","Högtid","Årtal","Namn på känd plats", "Substantiv i singular", "Kroppsdel i best.form","Siffra","Historisk person", "Resturang", "Siffra","Tidsenhet","")
+        var array_presskonferens = arrayOf("Namn på en tecknad figur", "Tidsenhet", "Beskrivning på en person","Siffra", "Mätenhet", "Färg","Siffra","Tidsenhet","Geografisk plats", "Substantiv", "Kroppsdel","Namn på känd person","Högtid","Årtal","Namn på känd plats", "Substantiv i singular", "Kroppsdel i bestämd form","Siffra","Historisk person", "Resturang", "Siffra","Tidsenhet","")
 
+        random_generator.random_tips(tips_text_presskonferens)
 
+        progressBar_presskonferens.progress = 0
 
         back_button_presskonferns.setOnClickListener {
-            array_presskonferens = arrayOf("Namn på en tecknad figur", "Tidsenhet", "Beskrivning på en person","Siffra", "Mätenhet", "Färg","Siffra","Tidsenhet","Geografisk plats", "Substantiv", "Kroppsdel","Namn på känd person","Högtid","Årtal","Namn på känd plats", "Substantiv i singular", "Kroppsdel i best.form","Siffra","Historisk person", "Resturang", "Siffra","Tidsenhet","")
+            array_presskonferens = arrayOf("Namn på en tecknad figur", "Tidsenhet", "Beskrivning på en person","Siffra", "Mätenhet", "Färg","Siffra","Tidsenhet","Geografisk plats", "Substantiv", "Kroppsdel","Namn på känd person","Högtid","Årtal","Namn på känd plats", "Substantiv i singular", "Kroppsdel i bestämd form","Siffra","Historisk person", "Resturang", "Siffra","Tidsenhet","")
+
             AlertDialog.Builder(this)
                 .setMessage("Vill du avsluta? Ändringar kommer inte att sparas!")
                 .setCancelable(false)
-                .setPositiveButton("Yes",
+                .setPositiveButton("Ja",
                     DialogInterface.OnClickListener { dialog, id -> this@presskonferens.finish() })
-                .setNegativeButton("No", null)
+                .setNegativeButton("Nej", null)
                 .show()
 
         }
@@ -36,6 +43,7 @@ class presskonferens : AppCompatActivity() {
         var counter_presskonferens = 0
 
         spela_button_presskonferns.setOnClickListener {
+            progressBar_presskonferens.visibility = View.VISIBLE
             input_text_presskonferns.visibility = View.VISIBLE
             confirm_button_presskonferns.visibility = View.VISIBLE
             spela_button_presskonferns.visibility = View.INVISIBLE
@@ -46,6 +54,7 @@ class presskonferens : AppCompatActivity() {
 
         confirm_button_presskonferns.setOnClickListener {
             if (counter_presskonferens < array_presskonferens.size) {
+                progressBar_presskonferens.progress = (progressBar_presskonferens.progress+4)%100
                 desc_text_presskonferns.setText(array_presskonferens[counter_presskonferens])
                 array_presskonferens[counter_presskonferens - 1] = input_text_presskonferns.getText().toString()
                 counter_presskonferens++
@@ -59,12 +68,13 @@ class presskonferens : AppCompatActivity() {
             }
 
             if (counter_presskonferens == array_presskonferens.size) {
+                progressBar_presskonferens.visibility = View.INVISIBLE
                 text_story_presskonferns.setText(textStory_presskonferens)
                 desc_text_presskonferns.visibility = View.INVISIBLE
                 confirm_button_presskonferns.visibility = View.INVISIBLE
                 input_text_presskonferns.visibility = View.INVISIBLE
                 continue_button_presskonferens.visibility = View.VISIBLE
-                array_presskonferens = arrayOf("Namn på en tecknad figur", "Tidsenhet", "Beskrivning på en person","Siffra", "Mätenhet", "Färg","Siffra","Tidsenhet","Geografisk plats", "Substantiv", "Kroppsdel","Namn på känd person","Högtid","Årtal","Namn på känd plats", "Substantiv i singular", "Kroppsdel i best.form","Siffra","Historisk person", "Resturang", "Siffra","Tidsenhet","")
+                array_presskonferens = arrayOf("Namn på en tecknad figur", "Tidsenhet", "Beskrivning på en person","Siffra", "Mätenhet", "Färg","Siffra","Tidsenhet","Geografisk plats", "Substantiv", "Kroppsdel","Namn på känd person","Högtid","Årtal","Namn på känd plats", "Substantiv i singular", "Kroppsdel i bestämd form","Siffra","Historisk person", "Resturang", "Siffra","Tidsenhet","")
                 tips_text_presskonferens.visibility = View.INVISIBLE
                 tips_title_presskonferens.visibility = View.INVISIBLE
 
@@ -86,9 +96,9 @@ class presskonferens : AppCompatActivity() {
         AlertDialog.Builder(this)
             .setMessage("Vill du avsluta? Ändringar kommer inte att sparas!")
             .setCancelable(false)
-            .setPositiveButton("Yes",
+            .setPositiveButton("Ja",
                 DialogInterface.OnClickListener { dialog, id -> this@presskonferens.finish() })
-            .setNegativeButton("No", null)
+            .setNegativeButton("Nej", null)
             .show()
     }
 }

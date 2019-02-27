@@ -21,14 +21,13 @@ class dejt : AppCompatActivity() {
     var counter1 = 0
     var counter2 = 0
 
-
-
+    val random_generator = com.example.spens.mad_lib_design_2.random_generator()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dejt)
 
-
+        random_generator.random_tips(tips_text_dejt)
 
         array_dejt_p2 = arrayOf("Adjektiv","Verb som slutar på: a","Resturang","Siffra","Längenhet","Adjektiv","Siffra","Substantiv i plural","Kroppsdel som sluar på: t","")
         array_dejt_p1 = arrayOf("Fordon i best form","Substantiv","Klädesplagg i best form","Vätska","Adjektiv som kan beskriva mat","Land","Star Wars karaktär","Substantiv","Tecknad figur","")

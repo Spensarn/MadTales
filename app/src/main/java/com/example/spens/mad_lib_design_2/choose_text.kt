@@ -24,6 +24,7 @@ class choose_text : AppCompatActivity() {
         buttonEffect(företagspitch_button)
         buttonEffect(bankrån_button)
         buttonEffect(jakt_button)
+        buttonEffect(reklam_button)
 
         sticky_switch.setOnClickListener{
             if(bool == true) {
@@ -36,7 +37,7 @@ class choose_text : AppCompatActivity() {
                 jakt_button.visibility = View.INVISIBLE
                 reklam_button.visibility = View.INVISIBLE
                 spelarläge.setText("2 Spelare")
-                test_button.visibility = View.VISIBLE
+                klass_button.visibility = View.VISIBLE
                 dejt_button.visibility = View.VISIBLE
 
             }
@@ -50,7 +51,7 @@ class choose_text : AppCompatActivity() {
                 jakt_button.visibility = View.VISIBLE
                 reklam_button.visibility = View.VISIBLE
                 spelarläge.setText("1 Spelare")
-                test_button.visibility = View.INVISIBLE
+                klass_button.visibility = View.INVISIBLE
                 dejt_button.visibility = View.INVISIBLE
 
             }
@@ -84,8 +85,8 @@ class choose_text : AppCompatActivity() {
             startActivity(intent)
         }
 
-        test_button.setOnClickListener {
-            val intent = Intent(this, two_player_test::class.java)
+        klass_button.setOnClickListener {
+            val intent = Intent(this, klassatertraff::class.java)
             startActivity(intent)
         }
         dejt_button.setOnClickListener {

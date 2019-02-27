@@ -12,18 +12,22 @@ import android.app.Activity
 import android.app.AlertDialog
 import kotlinx.android.synthetic.main.activity_foretagspitch.*
 import android.content.DialogInterface
-
-
+import android.support.v4.widget.TextViewCompat
+import kotlinx.android.synthetic.main.activity_choose_text.*
 
 
 class foretagspitch : AppCompatActivity() {
 
+    val random_generator = com.example.spens.mad_lib_design_2.random_generator()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_foretagspitch)
         array_företagspitch = arrayOf("Namn", "Siffra","Grönsak på engelska", "Substantiv i singular","Verb","Butikskedja i plural","Land","Land","Siffra","Årtal","Hemsida","Namn på by","Låg siffra","Substantiv i plural","Hög siffra","Tidsenhet","Namn innehållande 3 boktsåver","Kändis","Kroppsdel i best form","Siffra","")
 
+        random_generator.random_tips(tips_text_företagspitch)
+
+        progressBar_företagspitch.progress = 0
 
         back_button_företagspitch.setOnClickListener {
             array_företagspitch = arrayOf("Namn", "Siffra","Grönsak på engelska", "Substantiv i singular","Verb","Butikskedja i plural","Land","Land","Siffra","Årtal","Hemsida","Namn på by","Låg siffra","Substantiv i plural","Hög siffra","Tidsenhet","Namn innehållande 3 boktsåver","Kändis","Kroppsdel i best form","Siffra","")
@@ -31,14 +35,10 @@ class foretagspitch : AppCompatActivity() {
             AlertDialog.Builder(this)
                 .setMessage("Vill du avsluta? Ändringar kommer inte att sparas!")
                 .setCancelable(false)
-                .setPositiveButton("Yes",
+                .setPositiveButton("Ja",
                     DialogInterface.OnClickListener { dialog, id -> this@foretagspitch.finish() })
-                .setNegativeButton("No", null)
+                .setNegativeButton("Nej", null)
                 .show()
-
-            //val intent = Intent(this, choose_text::class.java)
-            //startActivity(intent)
-
 
         }
 
@@ -46,6 +46,8 @@ class foretagspitch : AppCompatActivity() {
         var counter = 0
 
         spela_button_företagspitch.setOnClickListener {
+            //företagspitch_button.visibility = View.INVISIBLE
+            progressBar_företagspitch.visibility = View.VISIBLE
             input_text_företagspitch.visibility = View.VISIBLE
             confirm_button_företagspitch.visibility = View.VISIBLE
             spela_button_företagspitch.visibility = View.INVISIBLE
@@ -56,12 +58,12 @@ class foretagspitch : AppCompatActivity() {
             //like_image_företagspitch.visibility = View.INVISIBLE
             //dislike_image_företagspitch.visibility = View.INVISIBLE
 
-
             counter++
         }
 
         confirm_button_företagspitch.setOnClickListener {
             if (counter < array_företagspitch.size) {
+                progressBar_företagspitch.progress = (progressBar_företagspitch.progress+5)%100
                 desc_text_företagspitch.setText(array_företagspitch[counter])
                 array_företagspitch[counter - 1] = input_text_företagspitch.getText().toString()
                 counter++
@@ -74,7 +76,10 @@ class foretagspitch : AppCompatActivity() {
             }
 
             if (counter == array_företagspitch.size) {
+
+
                 text_story_företagspitch.setText(textstory_företagspitch)
+                progressBar_företagspitch.visibility = View.INVISIBLE
                 desc_text_företagspitch.visibility = View.INVISIBLE
                 confirm_button_företagspitch.visibility = View.INVISIBLE
                 input_text_företagspitch.visibility = View.INVISIBLE
@@ -101,9 +106,9 @@ class foretagspitch : AppCompatActivity() {
         AlertDialog.Builder(this)
             .setMessage("Vill du avsluta? Ändringar kommer inte att sparas!")
             .setCancelable(false)
-            .setPositiveButton("Yes",
+            .setPositiveButton("Ja",
                 DialogInterface.OnClickListener { dialog, id -> this@foretagspitch.finish() })
-            .setNegativeButton("No", null)
+            .setNegativeButton("Nej", null)
             .show()
     }
 }

@@ -13,18 +13,22 @@ import android.app.AlertDialog
 import android.content.DialogInterface
 import android.graphics.PorterDuff
 import android.view.MotionEvent
+import kotlinx.android.synthetic.main.activity_reklam.*
 
 
 class bankran : AppCompatActivity() {
 
 
-
+val random_generator = com.example.spens.mad_lib_design_2.random_generator()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_bankran)
         array_bankrån = arrayOf("Adjektiv som slutar på: a", "Siffra", "Tidsenhet","Siffra","Dåligt artistnamn","Superhjälte","Verb som slutar på: ar","Känt citat","Namn på hundvalp","Verb som slutar på: a","Kroppsdel","Skurk","Vapen i plural","Siffra","Tidsenhet","Siffra","Substantiv i plural","Substantiv i plural","Fordon som slutar på: n","Geografisk plats","Högtid","")
 
+        progressBar_bankrån.progress = 0
+
+        random_generator.random_tips(tips_text_banrån)
 
         buttonEffect(spela_button_bankrån)
 
@@ -34,9 +38,9 @@ class bankran : AppCompatActivity() {
             AlertDialog.Builder(this)
                 .setMessage("Vill du avsluta? Ändringar kommer inte att sparas!")
                 .setCancelable(false)
-                .setPositiveButton("Yes",
+                .setPositiveButton("Ja",
                     DialogInterface.OnClickListener { dialog, id -> this@bankran.finish() })
-                .setNegativeButton("No", null)
+                .setNegativeButton("Nej", null)
                 .show()
 
         }
@@ -45,6 +49,7 @@ class bankran : AppCompatActivity() {
         var counter = 0
 
         spela_button_bankrån.setOnClickListener {
+            progressBar_bankrån.visibility = View.VISIBLE
             input_text_bankrån.visibility = View.VISIBLE
             confirm_button_bankrån.visibility = View.VISIBLE
             spela_button_bankrån.visibility = View.INVISIBLE
@@ -62,6 +67,7 @@ class bankran : AppCompatActivity() {
 
         confirm_button_bankrån.setOnClickListener {
             if (counter < array_bankrån.size) {
+                progressBar_bankrån.progress = (progressBar_bankrån.progress + 4)%100
                 desc_text_bankrån.setText(array_bankrån[counter])
                 array_bankrån[counter - 1] = input_text_bankrån.getText().toString()
                 counter++
@@ -74,6 +80,7 @@ class bankran : AppCompatActivity() {
 
             if (counter == array_bankrån.size) {
                 text_story_bankrån.setText(textStory_bankrån)
+                progressBar_bankrån.visibility = View.INVISIBLE
                 desc_text_bankrån.visibility = View.INVISIBLE
                 confirm_button_bankrån.visibility = View.INVISIBLE
                 input_text_bankrån.visibility = View.INVISIBLE
@@ -118,9 +125,9 @@ class bankran : AppCompatActivity() {
         AlertDialog.Builder(this)
             .setMessage("Vill du avsluta? Ändringar kommer inte att sparas!")
             .setCancelable(false)
-            .setPositiveButton("Yes",
+            .setPositiveButton("Ja",
                 DialogInterface.OnClickListener { dialog, id -> this@bankran.finish() })
-            .setNegativeButton("No", null)
+            .setNegativeButton("Nej", null)
             .show()
     }
 }

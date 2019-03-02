@@ -1,6 +1,8 @@
 package com.example.spens.mad_lib_design_2
 
 import android.app.Activity
+import android.app.AlertDialog
+import android.content.DialogInterface
 import android.content.Intent
 import android.graphics.PorterDuff
 import android.graphics.Typeface
@@ -163,8 +165,14 @@ class klassatertraff : AppCompatActivity() {
         back_button_klass.setOnClickListener {
             array_klass_p2 = arrayOf("Något du säger när du blir förvånad","Sjukdom","Namn","Typ av straff i plural","Påhittat jobb","Substantiv i best form","Siffra","Djur","Verb","Ovanlig fritidsaktivitet","")
             array_klass_p1 = arrayOf("Jobb ett barn skulle vilja ha","Siffra","Siffra","Namn på elak person","Adjektiv","Olaglig aktivitet","Elaktronisk pryl som slutar på: n","Verb","")
-            val intent = Intent(this, choose_text::class.java)
-            startActivity(intent)
+
+            AlertDialog.Builder(this)
+                .setMessage("Vill du avsluta? Ändringar kommer inte att sparas!")
+                .setCancelable(false)
+                .setPositiveButton("Ja",
+                    DialogInterface.OnClickListener { dialog, id -> this@klassatertraff.finish() })
+                .setNegativeButton("Nej", null)
+                .show()
         }
     }
 

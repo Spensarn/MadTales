@@ -26,8 +26,8 @@ class choose_text : AppCompatActivity() {
         buttonEffect(jakt_button)
         buttonEffect(reklam_button)
 
-        sticky_switch.setOnClickListener{
-            if(bool == true) {
+        sticky_switch.setOnClickListener {
+            if (bool == true) {
                 Log.d("Testar", "1")
                 bool = false
                 presskonferens_button.visibility = View.INVISIBLE
@@ -37,11 +37,9 @@ class choose_text : AppCompatActivity() {
                 jakt_button.visibility = View.INVISIBLE
                 reklam_button.visibility = View.INVISIBLE
                 spelarläge.setText("2 Spelare")
-                klass_button.visibility = View.VISIBLE
-                dejt_button.visibility = View.VISIBLE
 
-            }
-            else {
+
+            } else {
                 Log.d("Testar", "2")
                 bool = true
                 presskonferens_button.visibility = View.VISIBLE
@@ -51,14 +49,13 @@ class choose_text : AppCompatActivity() {
                 jakt_button.visibility = View.VISIBLE
                 reklam_button.visibility = View.VISIBLE
                 spelarläge.setText("1 Spelare")
-                klass_button.visibility = View.INVISIBLE
-                dejt_button.visibility = View.INVISIBLE
+
 
             }
         }
 
-        back_choose_text.setOnClickListener{
-            val intent = Intent(this,MainActivity::class.java)
+        back_choose_text.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
 
@@ -85,26 +82,21 @@ class choose_text : AppCompatActivity() {
             startActivity(intent)
         }
 
-        klass_button.setOnClickListener {
-            val intent = Intent(this, klassatertraff::class.java)
-            startActivity(intent)
-        }
-        dejt_button.setOnClickListener {
-            val intent = Intent(this, dejt::class.java)
-            startActivity(intent)
-        }
         reklam_button.setOnClickListener {
             val intent = Intent(this, reklam::class.java)
             startActivity(intent)
+
+
         }
-
     }
-
     fun buttonEffect(button: View) {
         button.setOnTouchListener { v, event ->
             when (event.action) {
                 MotionEvent.ACTION_DOWN -> {
-                    v.background.setColorFilter(resources.getColor(R.color.colorPrimaryDark), PorterDuff.Mode.SRC_ATOP)
+                    v.background.setColorFilter(
+                        resources.getColor(R.color.colorPrimaryDark),
+                        PorterDuff.Mode.SRC_ATOP
+                    )
                     v.invalidate()
                 }
                 MotionEvent.ACTION_UP -> {
@@ -116,3 +108,5 @@ class choose_text : AppCompatActivity() {
         }
     }
 }
+
+

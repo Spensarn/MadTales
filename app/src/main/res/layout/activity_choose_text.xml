@@ -166,39 +166,7 @@
                     app:ss_iconPadding="10dp"
                     app:ss_animationType="curved"
                     app:ss_sliderBackgroundColor="#000"
-                    android:id="@+id/sticky_switch"/>
-
-            <Button
-                    android:text="Klassåterträff"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:id="@+id/klass_button"
-                    app:layout_constraintStart_toStartOf="@+id/guideline13"
-                    android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
-                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-                    android:layout_marginRight="8dp" android:layout_marginTop="8dp"
-                    app:layout_constraintTop_toTopOf="@+id/guideline14" android:layout_marginBottom="8dp"
-                    app:layout_constraintBottom_toTopOf="@+id/guideline15"
-                    android:background="@drawable/round_dark_blue"
-                    android:visibility="invisible" android:typeface="monospace"/>
-
-            <Button
-                    android:text="Dejt"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:id="@+id/dejt_button"
-                    app:layout_constraintEnd_toStartOf="@+id/guideline13"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginRight="8dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    app:layout_constraintTop_toTopOf="@+id/guideline14"
-                    android:layout_marginBottom="8dp"
-                    android:visibility="invisible"
-                    app:layout_constraintBottom_toTopOf="@+id/guideline15"
-                    android:background="@drawable/round_dark_green" android:typeface="monospace"/>
+                    android:id="@+id/sticky_switch" android:visibility="invisible"/>
 
 
         </android.support.constraint.ConstraintLayout>

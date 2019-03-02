@@ -9,13 +9,20 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".klassatertraff">
+        <activity android:name=".lekprogram"
+                  android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".reklam">
+        <activity android:name=".klassatertraff"
+                  android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".jakt">
+        <activity android:name=".reklam"
+                  android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".dejt">
+        <activity android:name=".jakt"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".dejt"
+                  android:screenOrientation="portrait">
         </activity>
 
         <uses-library
@@ -24,17 +31,21 @@
 
         <activity android:name=".two_player_test">
         </activity>
-        <activity android:name=".foretagspitch">
+        <activity android:name=".foretagspitch"
+                  android:screenOrientation="portrait">
         </activity>
         <activity android:name=".continue_screen_bankran">
         </activity>
-        <activity android:name=".bankran">
+        <activity android:name=".bankran"
+                  android:screenOrientation="portrait">
         </activity>
         <activity android:name=".saga">
         </activity>
-        <activity android:name=".jobbintervju">
+        <activity android:name=".jobbintervju"
+                  android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".presskonferens">
+        <activity android:name=".presskonferens"
+                  android:screenOrientation="portrait">
         </activity>
         <activity android:name=".MainActivity">
             <intent-filter>

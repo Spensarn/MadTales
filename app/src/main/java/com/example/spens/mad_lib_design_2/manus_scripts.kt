@@ -3,6 +3,7 @@ package com.example.spens.mad_lib_design_2
 
 val dejt_class = dejt()
 val klass_class = klassatertraff()
+val lekprogram_class = lekprogram()
 
 var array_presskonferens = arrayOf("Namn på en tecknad figur", "Tidsenhet", "Beskrivning på en person","Siffra", "Mätenhet", "Färg","Siffra","Tidsenhet","Geografisk plats", "Substantiv", "Kroppsdel","Namn på känd person","Högtid","Årtal","Namn på känd plats", "Substantiv i singular", "Kroppsdel i bestämd form","Siffra","Historisk person", "Resturang", "Siffra","Tidsenhet","")
 var textStory_presskonferens = "God kväll, jag heter " + array_presskonferens[0] + " och är huvudansvarig för denna mordutredning. Jag och mitt team har arbetat i många " + array_presskonferens[1] + " för att få fram en " + array_presskonferens[2] + " och bra beskrivning på mördaren. Det vi i nuläget vet är att mördaren antagligen är " + array_presskonferens[3] + "  " + array_presskonferens[4] + " lång, har " + array_presskonferens[5] + " hårfärg, är cirka " + array_presskonferens[6] + " "  + array_presskonferens[7] + " gammal, bor i " + array_presskonferens[8] + " och har av vittnen blivit sedd ha en " + array_presskonferens[9] + " hängandes kring sin " + array_presskonferens[10] + ". Vi har kommit fram till att mordet på " + array_presskonferens[11] + " ägt rum på " + array_presskonferens[12] + " " + array_presskonferens[13] + ". Brottet skedde i " + array_presskonferens[14] + ". Vapnet som mördaren ska ha använt var en/ett " + array_presskonferens[15] + ". Vapnet ska ha använts på så sätt att mördaren slog offret 10 gånger på " + array_presskonferens[16] + " vilket tillslut ledde till offrets död. Vi har just nu " + array_presskonferens[17] + " bevis som pekar på att brottet har begåtts av " + array_presskonferens[18] + ". Dock behöver vi ännu mer bevis för att vara säkra. Vi har ännu inte hittat brottslingen men enligt en trovärdig källa besöker mördaren " + array_presskonferens[19] + " " + array_presskonferens[20] + " gånger varje " + array_presskonferens[21] + ". Så vi räknar med ett gripande inom kort. Tack för mig!"
@@ -55,6 +56,24 @@ var textStory_klass = klass_class.spelare1 + ": Ne men " + array_klass_p2[0] + "
         klass_class.spelare1 +": Nja jag har slutat, har börjat att " + array_klass_p2[9] + ", det är ganska kul! Vad gör du när du får lite ledig tid?\n"+
         klass_class.spelare2 +": Jag sitter bara framför " + array_klass_p1[6] + " hela dagarna så inget intressant, men jag måste iväg nu och " + array_klass_p1[7] + " så vi får höras senare\n!"+
         klass_class.spelare1 + ": Okej ha det!"
+
+
+var array_lekprogram_p2 = arrayOf("Påhittat namn","Stad","Tidsspann","Siffra","Valuta","Adjektiv","Känd person","Djur","Film","Teckand film","Siffra","Person i rummet","Årtal","Annat årtal","Elektronisk pryl","Hög siffra","Låg siffra","")
+var array_lekprogram_p1 = arrayOf("Töntig hälsningsfras","Adjektiv","Något som är olagligt att köpa, i plural","Adjektiv","Fartligt land","Tidsspann","Något man säger när man blir förvånad","Organ","Något man säger när man blir arg","Skriv 'ja' eller 'nej'")
+
+var textStory_lekprogram = lekprogram_class.spelare1 +": Hej och välkomna till kvällens program, idag har jag med mig "+ array_lekprogram_p2[0]+ " som kommer från "+ array_lekprogram_p2[1]+ " och är "+ array_lekprogram_p2[2]+ " gammal. Hur mår du? Är du Nervös? \n" +
+    lekprogram_class.spelare2 + ": "+ array_lekprogram_p1[0]+ " jag mår bra och känner mig "+ array_lekprogram_p1[1]+ " idag, är inte alls nervös faktiskt, känner att detta kommer gå bra\n." +
+    lekprogram_class.spelare1 + ": Vad skulle du göra om du vann dessa "+ array_lekprogram_p2[3]+ " "+ array_lekprogram_p2[4] +"\n"+
+    lekprogram_class.spelare2 + ": Jag skulle nog köpa mig lite "+ array_lekprogram_p1[2]+ " och kanske en resa för mig och min "+ array_lekprogram_p1[3]+ " partner till "+ array_lekprogram_p1[4]+ ".\n"+
+    lekprogram_class.spelare1 + ": Okej då ska vi få se om du har vad som krävs för att bli…  "+ array_lekprogram_p2[5]+ ", här kommer första frågan. “I vilken film spelar "+ array_lekprogram_p2[6]+ " rollen som en "+ array_lekprogram_p2[7]+ "? Är det A: "+ array_lekprogram_p2[7]+ " eller B: "+ array_lekprogram_p2[8]+ "?\n"+
+    lekprogram_class.spelare2 + ": Oj ja denna är väldigt lätt! Såg faktiskt "+ array_lekprogram_p2[8]+ " för bara "+ array_lekprogram_p1[5]+ " sen, jag svarar alltså A "+ array_lekprogram_p2[8]+ "!\n"+
+    lekprogram_class.spelare1 + ": Det är rätt svar du har "+ array_lekprogram_p2[9]+ " " + array_lekprogram_p2[4]+ ". Nästa fråga följer “Vilket år föddes "+ array_lekprogram_p2[10]+ ", är det A: "+ array_lekprogram_p2[11]+ " eller B: "+ array_lekprogram_p2[12]+ "?\n"+
+    lekprogram_class.spelare2 + ": Oj den var svår, får nog ta och använda en livlina, jag frågar publiken.\n"+
+    lekprogram_class.spelare1 + ": Okej då ber vi publiken ta fram era "+ array_lekprogram_p2[13]+ " och svara… "+ array_lekprogram_p2[14]+ " procent svarade A och "+ array_lekprogram_p2[15]+ " svarade B.\n"+
+    lekprogram_class.spelare2 + ": "+ array_lekprogram_p1[6]+ " nu blir jag osäker, men jag måste lita på min "+ array_lekprogram_p1[7]+ " känsla och säga B\n." +
+    lekprogram_class.spelare1 + ": Det är tyvärr fel och du är ute, tack för att du spelade! Var det kul?\n"+
+    lekprogram_class.spelare2 + ": "+ array_lekprogram_p1[8]+ " "+ array_lekprogram_p1[9]+ ".\n"+
+    lekprogram_class.spelare1 + ": Okej det var allt för ikväll vi ses nästa vecka, hejdå!"
 
 
 

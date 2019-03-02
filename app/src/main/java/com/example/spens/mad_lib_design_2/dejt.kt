@@ -1,6 +1,8 @@
 package com.example.spens.mad_lib_design_2
 
 import android.app.Activity
+import android.app.AlertDialog
+import android.content.DialogInterface
 import android.content.Intent
 import android.graphics.PorterDuff
 import android.graphics.Typeface
@@ -156,8 +158,14 @@ class dejt : AppCompatActivity() {
         back_button_dejt.setOnClickListener {
             array_dejt_p2 = arrayOf("Adjektiv","Verb som slutar på: a","Resturang","Siffra","Längenhet","Adjektiv","Siffra","Substantiv i plural","Kroppsdel som sluar på: t","")
             array_dejt_p1 = arrayOf("Fordon i best form","Substantiv","Klädesplagg i best form","Vätska","Adjektiv som kan beskriva mat","Land","Star Wars karaktär","Substantiv","Tecknad figur","")
-            val intent = Intent(this, choose_text::class.java)
-            startActivity(intent)
+
+            AlertDialog.Builder(this)
+                .setMessage("Vill du avsluta? Ändringar kommer inte att sparas!")
+                .setCancelable(false)
+                .setPositiveButton("Ja",
+                    DialogInterface.OnClickListener { dialog, id -> this@dejt.finish() })
+                .setNegativeButton("Nej", null)
+                .show()
         }
         }
 

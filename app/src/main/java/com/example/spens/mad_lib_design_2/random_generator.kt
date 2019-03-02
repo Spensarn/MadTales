@@ -1,7 +1,11 @@
 package com.example.spens.mad_lib_design_2
 
+import android.widget.Button
 import android.widget.TextView
 import kotlinx.android.synthetic.main.activity_reklam.*
+import android.R
+
+
 
 class random_generator{
 
@@ -23,5 +27,6 @@ class random_generator{
     }
 
     fun random_dialekt(){}
+
 
 }

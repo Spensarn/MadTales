@@ -21,14 +21,14 @@ class presskonferens : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_presskonferens)
-        var array_presskonferens = arrayOf("Namn på en tecknad figur", "Tidsenhet", "Beskrivning på en person","Siffra", "Mätenhet", "Färg","Siffra","Tidsenhet","Geografisk plats", "Substantiv", "Kroppsdel","Namn på känd person","Högtid","Årtal","Namn på känd plats", "Substantiv i singular", "Kroppsdel i bestämd form","Siffra","Historisk person", "Resturang", "Siffra","Tidsenhet","")
+        array_presskonferens = arrayOf("Namn på en tecknad figur", "Tidsenhet", "Beskrivning på en person","Siffra", "Mätenhet", "Färg","Siffra","Tidsenhet","Geografisk plats", "Substantiv", "Kroppsdel","Namn på känd person","Högtid","Årtal","Namn på känd plats", "Substantiv i singular", "Kroppsdel i bestämd form","Siffra","Historisk person", "Resturang", "Siffra","Tidsenhet i singular","")
 
         random_generator.random_tips(tips_text_presskonferens)
 
         progressBar_presskonferens.progress = 0
 
         back_button_presskonferns.setOnClickListener {
-            array_presskonferens = arrayOf("Namn på en tecknad figur", "Tidsenhet", "Beskrivning på en person","Siffra", "Mätenhet", "Färg","Siffra","Tidsenhet","Geografisk plats", "Substantiv", "Kroppsdel","Namn på känd person","Högtid","Årtal","Namn på känd plats", "Substantiv i singular", "Kroppsdel i bestämd form","Siffra","Historisk person", "Resturang", "Siffra","Tidsenhet","")
+            array_presskonferens = arrayOf("Namn på en tecknad figur", "Tidsenhet", "Beskrivning på en person","Siffra", "Mätenhet", "Färg","Siffra","Tidsenhet","Geografisk plats", "Substantiv", "Kroppsdel","Namn på känd person","Högtid","Årtal","Namn på känd plats", "Substantiv i singular", "Kroppsdel i bestämd form","Siffra","Historisk person", "Resturang", "Siffra","Tidsenhet i singular","")
 
             AlertDialog.Builder(this)
                 .setMessage("Vill du avsluta? Ändringar kommer inte att sparas!")
@@ -74,7 +74,7 @@ class presskonferens : AppCompatActivity() {
                 confirm_button_presskonferns.visibility = View.INVISIBLE
                 input_text_presskonferns.visibility = View.INVISIBLE
                 continue_button_presskonferens.visibility = View.VISIBLE
-                array_presskonferens = arrayOf("Namn på en tecknad figur", "Tidsenhet", "Beskrivning på en person","Siffra", "Mätenhet", "Färg","Siffra","Tidsenhet","Geografisk plats", "Substantiv", "Kroppsdel","Namn på känd person","Högtid","Årtal","Namn på känd plats", "Substantiv i singular", "Kroppsdel i bestämd form","Siffra","Historisk person", "Resturang", "Siffra","Tidsenhet","")
+                array_presskonferens = arrayOf("Namn på en tecknad figur", "Tidsenhet", "Beskrivning på en person","Siffra", "Mätenhet", "Färg","Siffra","Tidsenhet","Geografisk plats", "Substantiv", "Kroppsdel","Namn på känd person","Högtid","Årtal","Namn på känd plats", "Substantiv i singular", "Kroppsdel i bestämd form","Siffra","Historisk person", "Resturang", "Siffra","Tidsenhet i singular","")
                 tips_text_presskonferens.visibility = View.INVISIBLE
                 tips_title_presskonferens.visibility = View.INVISIBLE
 

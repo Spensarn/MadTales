@@ -85,8 +85,10 @@ class choose_text : AppCompatActivity() {
         reklam_button.setOnClickListener {
             val intent = Intent(this, reklam::class.java)
             startActivity(intent)
-
-
+        }
+        matlagning_button.setOnClickListener {
+            val intent = Intent(this, matlagning::class.java)
+            startActivity(intent)
         }
     }
     fun buttonEffect(button: View) {

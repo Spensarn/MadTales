@@ -78,7 +78,7 @@
                     android:layout_marginLeft="8dp" android:layout_marginStart="8dp" android:layout_marginBottom="8dp"
                     app:layout_constraintBottom_toTopOf="@+id/guideline14" android:layout_marginTop="8dp"
                     app:layout_constraintTop_toTopOf="parent" android:textStyle="bold" android:textAllCaps="true"
-                    app:fontFamily="serif-monospace" android:textSize="18sp" android:text="1 Spelare"/>
+                    app:fontFamily="serif-monospace" android:textSize="18sp" android:text="Välj text"/>
             <Button
                     android:text="Jakt"
                     android:layout_width="0dp"
@@ -119,6 +119,34 @@
                     android:textColor="@color/cardview_light_background"
                     app:layout_constraintHorizontal_bias="1.0" app:layout_constraintVertical_bias="0.0"
                     android:typeface="monospace"/>
+            <Button
+                    android:text="Nyheter"
+                    android:layout_width="168dp"
+                    android:layout_height="90dp"
+                    android:id="@+id/nyheter_button"
+                    android:background="#F32D7F"
+                    android:textColor="@color/cardview_light_background"
+                    android:typeface="monospace"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp" android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline13" android:layout_marginRight="8dp"
+                    android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/bankrån_button"
+                    android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/guideline2"
+                    app:layout_constraintHorizontal_bias="0.0" app:layout_constraintVertical_bias="1.0"/>
+            <Button
+                    android:text="Matlagning"
+                    android:layout_width="168dp"
+                    android:layout_height="90dp"
+                    android:id="@+id/matlagning_button"
+                    android:background="#33ABBB"
+                    android:textColor="@color/cardview_light_background"
+                    android:typeface="monospace"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toTopOf="@+id/guideline17" android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline2" android:layout_marginStart="8dp"
+                    app:layout_constraintStart_toStartOf="@+id/guideline13" android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginRight="8dp"/>
             <Button
                     android:text="Reklam"
                     android:layout_width="0dp"
@@ -167,6 +195,11 @@
                     app:ss_animationType="curved"
                     app:ss_sliderBackgroundColor="#000"
                     android:id="@+id/sticky_switch" android:visibility="invisible"/>
+            <android.support.constraint.Guideline
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" app:layout_constraintGuide_begin="497dp"
+                    android:id="@+id/guideline2"/>
 
 
         </android.support.constraint.ConstraintLayout>

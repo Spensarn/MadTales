@@ -29,10 +29,10 @@ class reklam : AppCompatActivity() {
 
         random_generator.random_tips(tips_text_reklam)
 
-        array_reklam = arrayOf("Kroppsdel i best form","Något som äcklar dig","Föremål i ett hushåll i best form","Något annat som äcklar dig","Namn som låter adligt","Adjektiv","Möbel i best form","Verb","Substantiv i best form","Tidsspann","Typ av släkting","Adjektiv","Siffra","Valuta","Adjektiv","Låg siffra","Verb","Substantiv i plural","")
+        array_reklam = arrayOf("Kroppsdel i bestämd form","Något som äcklar dig","Föremål i ett hushåll i bestämd form","Något annat som äcklar dig","Namn som låter adligt","Adjektiv","Möbel i bestämd form","Verb","Substantiv i bestämd form","Tidsspann","Typ av släkting","Adjektiv","Siffra","Valuta","Adjektiv","Låg siffra","Verb","Substantiv i plural","")
 
         back_button_reklam.setOnClickListener {
-            array_reklam = arrayOf("Kroppsdel i best form","Något som äcklar dig","Föremål i ett hushåll i best form","Något annat som äcklar dig","Namn som låter adligt","Adjektiv","Möbel i best form","Verb","Substantiv i best form","Tidsspann","Typ av släkting","Adjektiv","Siffra","Valuta","Adjektiv","Låg siffra","Verb","Substantiv i plural","")
+            array_reklam = arrayOf("Kroppsdel i bestämd form","Något som äcklar dig","Föremål i ett hushåll i bestämd form","Något annat som äcklar dig","Namn som låter adligt","Adjektiv","Möbel i bestämd form","Verb","Substantiv i bestämd form","Tidsspann","Typ av släkting","Adjektiv","Siffra","Valuta","Adjektiv","Låg siffra","Verb","Substantiv i plural","")
 
             AlertDialog.Builder(this)
                 .setMessage("Vill du avsluta? Ändringar kommer inte att sparas!")
@@ -92,7 +92,7 @@ class reklam : AppCompatActivity() {
                 tips_text_reklam.visibility = View.INVISIBLE
                 tips_title_reklam.visibility = View.INVISIBLE
                 continue_button_reklam.visibility = View.VISIBLE
-                array_reklam = arrayOf("Kroppsdel i best form","Något som äcklar dig","Föremål i ett hushåll i best form","Något annat som äcklar dig","Namn som låter adligt","Adjektiv","Möbel i best form","Verb","Substantiv i best form","Tidsspann","Typ av släkting","Adjektiv","Siffra","Valuta","Adjektiv","Låg siffra","Verb","Substantiv i plural","")
+                array_reklam = arrayOf("Kroppsdel i bestämd form","Något som äcklar dig","Föremål i ett hushåll i bestämd form","Något annat som äcklar dig","Namn som låter adligt","Adjektiv","Möbel i bestämd form","Verb","Substantiv i bestämd form","Tidsspann","Typ av släkting","Adjektiv","Siffra","Valuta","Adjektiv","Låg siffra","Verb","Substantiv i plural","")
 
                 val imm = getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
                 imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY,0)

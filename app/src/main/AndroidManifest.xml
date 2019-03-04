@@ -9,20 +9,27 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".lekprogram"
-                  android:screenOrientation="portrait">
+        <activity android:name=".matlagning">
         </activity>
-        <activity android:name=".klassatertraff"
-                  android:screenOrientation="portrait">
+        <activity
+                android:name=".lekprogram"
+                android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".reklam"
-                  android:screenOrientation="portrait">
+        <activity
+                android:name=".klassatertraff"
+                android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".jakt"
-                  android:screenOrientation="portrait">
+        <activity
+                android:name=".reklam"
+                android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".dejt"
-                  android:screenOrientation="portrait">
+        <activity
+                android:name=".jakt"
+                android:screenOrientation="portrait">
+        </activity>
+        <activity
+                android:name=".dejt"
+                android:screenOrientation="portrait">
         </activity>
 
         <uses-library
@@ -31,21 +38,25 @@
 
         <activity android:name=".two_player_test">
         </activity>
-        <activity android:name=".foretagspitch"
-                  android:screenOrientation="portrait">
+        <activity
+                android:name=".foretagspitch"
+                android:screenOrientation="portrait">
         </activity>
         <activity android:name=".continue_screen_bankran">
         </activity>
-        <activity android:name=".bankran"
-                  android:screenOrientation="portrait">
+        <activity
+                android:name=".bankran"
+                android:screenOrientation="portrait">
         </activity>
         <activity android:name=".saga">
         </activity>
-        <activity android:name=".jobbintervju"
-                  android:screenOrientation="portrait">
+        <activity
+                android:name=".jobbintervju"
+                android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".presskonferens"
-                  android:screenOrientation="portrait">
+        <activity
+                android:name=".presskonferens"
+                android:screenOrientation="portrait">
         </activity>
         <activity android:name=".MainActivity">
             <intent-filter>

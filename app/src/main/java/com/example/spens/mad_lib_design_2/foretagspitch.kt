@@ -23,14 +23,14 @@ class foretagspitch : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_foretagspitch)
-        array_företagspitch = arrayOf("Namn", "Siffra","Grönsak på engelska", "Substantiv i singular","Verb","Butikskedja i plural","Land","Land","Siffra","Årtal","Hemsida","Namn på by","Låg siffra","Substantiv i plural","Hög siffra","Tidsenhet","Namn innehållande 3 boktsåver","Kändis","Kroppsdel i best form","Siffra","")
+        array_företagspitch = arrayOf("Namn", "Siffra","Grönsak på engelska", "Substantiv i singular","Verb","Butikskedja i plural","Land","Land","Siffra","Årtal","Hemsida","Namn på by","Låg siffra","Substantiv i plural","Hög siffra","Tidsenhet","Namn innehållande 3 boktsåver","Kändis","Kroppsdel i bestämd form","Siffra","")
 
         random_generator.random_tips(tips_text_företagspitch)
 
         progressBar_företagspitch.progress = 0
 
         back_button_företagspitch.setOnClickListener {
-            array_företagspitch = arrayOf("Namn", "Siffra","Grönsak på engelska", "Substantiv i singular","Verb","Butikskedja i plural","Land","Land","Siffra","Årtal","Hemsida","Namn på by","Låg siffra","Substantiv i plural","Hög siffra","Tidsenhet","Namn innehållande 3 boktsåver","Kändis","Kroppsdel i best form","Siffra","")
+            array_företagspitch = arrayOf("Namn", "Siffra","Grönsak på engelska", "Substantiv i singular","Verb","Butikskedja i plural","Land","Land","Siffra","Årtal","Hemsida","Namn på by","Låg siffra","Substantiv i plural","Hög siffra","Tidsenhet","Namn innehållande 3 boktsåver","Kändis","Kroppsdel i bestämd form","Siffra","")
 
             AlertDialog.Builder(this)
                 .setMessage("Vill du avsluta? Ändringar kommer inte att sparas!")
@@ -86,7 +86,7 @@ class foretagspitch : AppCompatActivity() {
                 tips_text_företagspitch.visibility = View.INVISIBLE
                 tips_title_företagspitch.visibility = View.INVISIBLE
                 continue_button_företagspitch.visibility = View.VISIBLE
-                array_företagspitch = arrayOf("Namn", "Siffra","Grönsak på engelska", "Substantiv i singular","Verb","Butikskedja i plural","Land","Land","Siffra","Årtal","Hemsida","Namn på by","Låg siffra","Substantiv i plural","Hög siffra","Tidsenhet","Namn innehållande 3 boktsåver","Kändis","Kroppsdel i best form","Siffra","")
+                array_företagspitch = arrayOf("Namn", "Siffra","Grönsak på engelska", "Substantiv i singular","Verb","Butikskedja i plural","Land","Land","Siffra","Årtal","Hemsida","Namn på by","Låg siffra","Substantiv i plural","Hög siffra","Tidsenhet","Namn innehållande 3 boktsåver","Kändis","Kroppsdel i bestämd form","Siffra","")
 
                 val imm = getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
                 imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY,0)

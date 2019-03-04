@@ -22,14 +22,14 @@ class jakt : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_jakt)
-        array_jakt = arrayOf("Påhittat långt namn","Adjektiv som slutar på: a","Litet djur i best form","Känd byggnad","Siffra","Föremål som kan användas som vapen","Siffra","Barnleksak i plural","Fånigt smaknamn","Tidsenhet","Kroppsdel i best form","Siffra","Tidsenhet","Bakverk","Svordom ett barn skulle säga","Verb som slutar på: a","Något du säger när du blir förvånad","")
+        array_jakt = arrayOf("Påhittat långt namn","Adjektiv som slutar på: a","Litet djur i bestämd form","Känd byggnad","siffra","Föremål som kan användas som vapen","Siffra","Barnleksak i plural","Fånigt smaknamn","Tidsenhet","Kroppsdel i bestämd form","Siffra","Tidsenhet","Bakverk","Svordom ett barn skulle säga","Verb som slutar på: a","Något du säger när du blir förvånad","")
 
         random_generator.random_tips(tips_text_jakt)
 
         progressBar_jakt.progress = 0
 
         back_button_jakt.setOnClickListener {
-            array_jakt = arrayOf("Påhittat långt namn","Adjektiv som slutar på: a","Litet djur i best form","Känd byggnad","Siffra","Föremål som kan användas som vapen","Siffra","Barnleksak i plural","Fånigt smaknamn","Tidsenhet","Kroppsdel i best form","Siffra","Tidsenhet","Bakverk","Svordom ett barn skulle säga","Verb som slutar på: a","Något du säger när du blir förvånad","")
+            array_jakt = arrayOf("Påhittat långt namn","Adjektiv som slutar på: a","Litet djur i bestämd form","Känd byggnad","siffra","Föremål som kan användas som vapen","Siffra","Barnleksak i plural","Fånigt smaknamn","Tidsenhet","Kroppsdel i bestämd form","Siffra","Tidsenhet","Bakverk","Svordom ett barn skulle säga","Verb som slutar på: a","Något du säger när du blir förvånad","")
 
             AlertDialog.Builder(this)
                 .setMessage("Vill du avsluta? Ändringar kommer inte att sparas!")
@@ -83,7 +83,7 @@ class jakt : AppCompatActivity() {
                 tips_text_jakt.visibility = View.INVISIBLE
                 tips_title_jakt.visibility = View.INVISIBLE
                 continue_button_jakt.visibility = View.VISIBLE
-                array_jakt = arrayOf("Påhittat långt namn","Adjektiv som slutar på: a","Litet djur i best form","Känd byggnad","Siffra","Föremål som kan användas som vapen","Siffra","Barnleksak i plural","Fånigt smaknamn","Tidsenhet","Kroppsdel i best form","Siffra","Tidsenhet","Bakverk","Svordom ett barn skulle säga","Verb som slutar på: a","Något du säger när du blir förvånad","")
+                array_jakt = arrayOf("Påhittat långt namn","Adjektiv som slutar på: a","Litet djur i bestämd form","Känd byggnad","siffra","Föremål som kan användas som vapen","Siffra","Barnleksak i plural","Fånigt smaknamn","Tidsenhet","Kroppsdel i bestämd form","Siffra","Tidsenhet","Bakverk","Svordom ett barn skulle säga","Verb som slutar på: a","Något du säger när du blir förvånad","")
 
                 val imm = getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
                 imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY,0)

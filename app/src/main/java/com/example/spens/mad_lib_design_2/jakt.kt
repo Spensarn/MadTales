@@ -22,14 +22,14 @@ class jakt : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_jakt)
-        array_jakt = arrayOf("Påhittat långt namn","Adjektiv som slutar på: a","Litet djur i bestämd form","Känd byggnad","siffra","Föremål som kan användas som vapen","Siffra","Barnleksak i plural","Fånigt smaknamn","Tidsenhet","Kroppsdel i bestämd form","Siffra","Tidsenhet","Bakverk","Svordom ett barn skulle säga","Verb som slutar på: a","Något du säger när du blir förvånad","")
+        array_jakt = arrayOf("Påhittat långt namn","Adjektiv som slutar på: a","Ett levande ting i bestämd form","Känd byggnad","Siffra","Föremål som kan användas som vapen","Siffra","Barnleksak i plural","Fånigt smaknamn","Tidsenhet","Kroppsdel i bestämd form","Siffra","Tidsenhet","Bakverk","Svordom ett barn skulle säga","Verb som slutar på: a","Något du säger när du blir förvånad","")
 
         random_generator.random_tips(tips_text_jakt)
 
         progressBar_jakt.progress = 0
 
         back_button_jakt.setOnClickListener {
-            array_jakt = arrayOf("Påhittat långt namn","Adjektiv som slutar på: a","Litet djur i bestämd form","Känd byggnad","siffra","Föremål som kan användas som vapen","Siffra","Barnleksak i plural","Fånigt smaknamn","Tidsenhet","Kroppsdel i bestämd form","Siffra","Tidsenhet","Bakverk","Svordom ett barn skulle säga","Verb som slutar på: a","Något du säger när du blir förvånad","")
+            array_jakt = arrayOf("Påhittat långt namn","Adjektiv som slutar på: a","Ett levande ting i bestämd form","Känd byggnad","Siffra","Föremål som kan användas som vapen","Siffra","Barnleksak i plural","Fånigt smaknamn","Tidsenhet","Kroppsdel i bestämd form","Siffra","Tidsenhet","Bakverk","Svordom ett barn skulle säga","Verb som slutar på: a","Något du säger när du blir förvånad","")
 
             AlertDialog.Builder(this)
                 .setMessage("Vill du avsluta? Ändringar kommer inte att sparas!")
@@ -66,7 +66,7 @@ class jakt : AppCompatActivity() {
                 desc_text_jakt.setText(array_jakt[counter])
                 array_jakt[counter - 1] = input_text_jakt.getText().toString()
                 counter++
-                textStory_jakt = "Hej och välkomna till jakt med " + array_jakt[0] +" idag ska vi jaga något speciellt, nämligen den ökända " + array_jakt[1] +" "+ array_jakt[2] +". Den har sitt näste precis här vid " + array_jakt[3]+ ". Det är ett mycket farligt och sällsynt djur, det finns bara "+ array_jakt[4] + " kvar idag. Bara ett vapen är till någon hjälp mot denna best och det är en "+ array_jakt[5] + ", om en nödsituation uppstår har vi "+ array_jakt[6] +" "+ array_jakt[7] + " lite utanför jaktområdet som är redo att användas mot "+ array_jakt[2] + " då det är så pass farligt. Många har försökt jaga det här monstret till varelse men misslyckats, min kompis "+ array_jakt[8] + " jagade i flera "+ array_jakt[9] + ", det var en tuff jakt och tillslut vann djuret, det slet av honom "+ array_jakt[10] + " och försvann sedan, "+ array_jakt[10] + " eller djuret har setts till sen dess. Men det kommer inte hända mig, jag kommer mycket förberedd till den här utmaningen, har tränat i minst "+ array_jakt[11] + " "+ array_jakt[12] + ". Ska försöka lura in djuret i en fälla, den lever endast på "+ array_jakt[13] + " så jag kan använda det till min fördel genom att lägga ut bete och sedan lägga mig i bakhåll. "+ array_jakt[14] + "! här kommer ju den, rakt mot oss! Börja "+ array_jakt[15] + " då skrämmer du den så hämtar jag "+ array_jakt[5] + "n. "+ array_jakt[16] + " jag tror jag glömde den hemma, ajdå..."
+                textStory_jakt = "Hej och välkomna till jakt med " + array_jakt[0] +" idag ska vi jaga något speciellt, nämligen den ökända " + array_jakt[1] +" "+ array_jakt[2] +". Den har sitt näste precis här vid " + array_jakt[3]+ ". Det är ett mycket farligt och sällsynt djur, det finns bara "+ array_jakt[4] + " kvar idag. Bara ett vapen är till någon hjälp mot denna best och det är en "+ array_jakt[5] + ", om en nödsituation uppstår har vi "+ array_jakt[6] +" "+ array_jakt[7] + " lite utanför jaktområdet som är redo att användas mot "+ array_jakt[2] + " då det är så pass farligt. Många har försökt jaga det här monstret till varelse men misslyckats, min kompis "+ array_jakt[8] + " jagade i flera "+ array_jakt[9] + ", det var en tuff jakt och tillslut vann djuret, det slet av honom "+ array_jakt[10] + " och försvann sedan ut i vildmarken, varken "+ array_jakt[10] + " eller djuret har setts till sen dess. Men det kommer inte hända mig, jag kommer mycket förberedd till den här utmaningen, har tränat i "+ array_jakt[11] + " "+ array_jakt[12] + " inför detta. Ska försöka lura in djuret i en fälla, den lever endast på "+ array_jakt[13] + " så jag kan använda det till min fördel genom att lägga ut bete och sedan lägga mig i bakhåll. "+ array_jakt[14] + "! här kommer ju den, rakt mot oss! Börja "+ array_jakt[15] + " då skrämmer du den så hämtar jag "+ array_jakt[5] + "n. "+ array_jakt[16] + " jag tror jag glömde den hemma, ajdå..."
                 input_text_jakt.setText("")
 
 
@@ -83,7 +83,7 @@ class jakt : AppCompatActivity() {
                 tips_text_jakt.visibility = View.INVISIBLE
                 tips_title_jakt.visibility = View.INVISIBLE
                 continue_button_jakt.visibility = View.VISIBLE
-                array_jakt = arrayOf("Påhittat långt namn","Adjektiv som slutar på: a","Litet djur i bestämd form","Känd byggnad","siffra","Föremål som kan användas som vapen","Siffra","Barnleksak i plural","Fånigt smaknamn","Tidsenhet","Kroppsdel i bestämd form","Siffra","Tidsenhet","Bakverk","Svordom ett barn skulle säga","Verb som slutar på: a","Något du säger när du blir förvånad","")
+                array_jakt = arrayOf("Påhittat långt namn","Adjektiv som slutar på: a","Litet djur i bestämd form","Känd byggnad","Siffra","Föremål som kan användas som vapen","Siffra","Barnleksak i plural","Fånigt smaknamn","Tidsenhet","Kroppsdel i bestämd form","Siffra","Tidsenhet","Bakverk","Svordom ett barn skulle säga","Verb som slutar på: a","Något du säger när du blir förvånad","")
 
                 val imm = getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
                 imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY,0)

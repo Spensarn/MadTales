@@ -4,76 +4,76 @@ import android.content.Intent
 import android.graphics.PorterDuff
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.MotionEvent
 import android.view.View
-import kotlinx.android.synthetic.main.activity_choose_text.*
+import kotlinx.android.synthetic.main.activity_choose_text2.*
 
-class choose_text : AppCompatActivity() {
+class choose_text2 : AppCompatActivity() {
 
     var bool: Boolean = true
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_choose_text)
+        setContentView(R.layout.activity_choose_text2)
+
+        /*buttonEffect(presskonferens_b)
+        buttonEffect(kärleksbrev)
+        buttonEffect(jobbintervju)
+        buttonEffect(bankrån)
+        buttonEffect(företagspitch)
+        buttonEffect(reklam)
+        buttonEffect(nyheter)
+        buttonEffect(matlagning)*/
 
 
-        buttonEffect(presskonferens_button)
-        buttonEffect(jobbintervju_button)
-        buttonEffect(företagspitch_button)
-        buttonEffect(bankrån_button)
-        buttonEffect(kärleksbrev_button)
-        buttonEffect(reklam_button)
-        buttonEffect(nyheter_button)
-        buttonEffect(matlagning_button)
 
 
 
-        back_choose_text.setOnClickListener {
+        back_b.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
 
-        presskonferens_button.setOnClickListener {
+        presskonferens_b.setOnClickListener {
             val intent = Intent(this, presskonferens::class.java)
             startActivity(intent)
         }
 
-        jobbintervju_button.setOnClickListener {
+        jobbintervju_b.setOnClickListener {
             val intent = Intent(this, jobbintervju::class.java)
             startActivity(intent)
         }
-        bankrån_button.setOnClickListener {
+        bankrån_b.setOnClickListener {
             val intent = Intent(this, bankran::class.java)
             startActivity(intent)
         }
-        företagspitch_button.setOnClickListener {
+        företagspitch_b.setOnClickListener {
             val intent = Intent(this, foretagspitch::class.java)
             startActivity(intent)
         }
 
-        kärleksbrev_button.setOnClickListener {
+        kärleksbrev_b.setOnClickListener {
             val intent = Intent(this, karleksbrev::class.java)
             startActivity(intent)
         }
 
-        reklam_button.setOnClickListener {
+        reklam_b.setOnClickListener {
             val intent = Intent(this, reklam::class.java)
             startActivity(intent)
         }
-        matlagning_button.setOnClickListener {
+        matlagning_b.setOnClickListener {
             val intent = Intent(this, matlagning::class.java)
             startActivity(intent)
         }
 
-        nyheter_button.setOnClickListener {
+        nyheter_b.setOnClickListener {
             val intent = Intent(this, nyheter::class.java)
             startActivity(intent)
         }
     }
-    fun buttonEffect(button: View) {
-        button.setOnTouchListener { v, event ->
+    fun buttonEffect(Imagebutton: View) {
+        Imagebutton.setOnTouchListener { v, event ->
             when (event.action) {
                 MotionEvent.ACTION_DOWN -> {
                     v.background.setColorFilter(

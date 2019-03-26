@@ -91,7 +91,6 @@ class reklam : AppCompatActivity() {
                 input_text_reklam.visibility = View.INVISIBLE
                 tips_text_reklam.visibility = View.INVISIBLE
                 tips_title_reklam.visibility = View.INVISIBLE
-                continue_button_reklam.visibility = View.VISIBLE
                 array_reklam = arrayOf("Kroppsdel i bestämd form","Något som äcklar dig","Föremål i ett hushåll i bestämd form","Något annat som äcklar dig","Namn som låter adligt","Adjektiv","Möbel i bestämd form","Verb","Substantiv i bestämd form","Tidsspann","Typ av släkting","Adjektiv","Siffra","Valuta","Adjektiv","Låg siffra","Verb","Substantiv i plural","")
 
                 val imm = getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager

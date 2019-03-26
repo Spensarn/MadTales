@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
 
 
         kör_button.setOnClickListener {
-            val intent = Intent(this, choose_text::class.java)
+            val intent = Intent(this, choose_text2::class.java)
             startActivity(intent)
         }
 

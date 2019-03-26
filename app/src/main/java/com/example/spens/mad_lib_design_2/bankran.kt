@@ -24,7 +24,7 @@ val random_generator = com.example.spens.mad_lib_design_2.random_generator()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_bankran)
-        array_bankrån = arrayOf("Adjektiv som slutar på: a", "Siffra", "Tidsenhet","Siffra","Dåligt artistnamn","Superhjälte","Verb som slutar på: ar","Känt citat","Namn på hundvalp","Verb som slutar på: a","Kroppsdel","Skurk","Vapen i plural","Siffra","Tidsenhet","Siffra","Substantiv i plural","Substantiv i plural","Fordon som slutar på: n","Geografisk plats","Högtid","")
+        array_bankrån = arrayOf("Adjektiv som slutar på: a", "Siffra", "Tidsenhet", "Siffra", "Dåligt artistnamn", "Superhjälte", "Verb som slutar på: ar", "Känt citat", "Namn på hundvalp", "Verb som slutar på: a", "Kroppsdel", "Skurk", "Vapen i plural", "Siffra", "Tidsenhet", "Siffra", "Substantiv i plural", "Substantiv i plural som slutar på: a", "Fordon som slutar på: n", "Geografisk plats", "Högtid", "")
 
         progressBar_bankrån.progress = 0
 
@@ -33,7 +33,7 @@ val random_generator = com.example.spens.mad_lib_design_2.random_generator()
         buttonEffect(spela_button_bankrån)
 
         back_button_bankrån.setOnClickListener {
-            array_bankrån = arrayOf("Adjektiv som slutar på: a", "Siffra", "Tidsenhet","Siffra","Dåligt artistnamn","Superhjälte","Verb som slutar på: ar","Känt citat","Namn på hundvalp","Verb som slutar på: a","Kroppsdel","Skurk","Vapen i plural","Siffra","Tidsenhet","Siffra","Substantiv i plural","Substantiv i plural","Fordon som slutar på: n","Geografisk plats","Högtid","")
+            array_bankrån = arrayOf("Adjektiv som slutar på: a", "Siffra", "Tidsenhet", "Siffra", "Dåligt artistnamn", "Superhjälte", "Verb som slutar på: ar", "Känt citat", "Namn på hundvalp", "Verb som slutar på: a", "Kroppsdel", "Skurk", "Vapen i plural", "Siffra", "Tidsenhet", "Siffra", "Substantiv i plural", "Substantiv i plural som slutar på: a", "Fordon som slutar på: n", "Geografisk plats", "Högtid", "")
 
             AlertDialog.Builder(this)
                 .setMessage("Vill du avsluta? Ändringar kommer inte att sparas!")
@@ -71,7 +71,7 @@ val random_generator = com.example.spens.mad_lib_design_2.random_generator()
                 desc_text_bankrån.setText(array_bankrån[counter])
                 array_bankrån[counter - 1] = input_text_bankrån.getText().toString()
                 counter++
-                textStory_bankrån = "Okej, det här är den " + array_bankrån[0] + "planen jag kom på, jag har arbetat med den i " + array_bankrån[1] + " " + array_bankrån[2] + "  så den kommer definitivt med " + array_bankrån[3] + " procent sannolikhet att fungera. Det här är planen: " + array_bankrån[4] + " du klär ut dig till " + array_bankrån[5] + ", går in till banken, ställer dig på en stol och " + array_bankrån[6] + " samtidigt som du skriker ut " + array_bankrån[7] + ". Allt detta för att skapa en distraktion för " + array_bankrån[8] + " vars uppgift är sno vaktens vapen, om du blir påkommen är planen att snabbt börja " + array_bankrån[9] + " med vakten och under tiden köra in en spruta med sömnmedel i vaktens " + array_bankrån[10] + ". Då vakten är neutraliserad så kommer jag och " + array_bankrån[11] + " in, tar upp våra " + array_bankrån[12] + " och hotar bankpersonalen att ge oss koden till valvet. Vi har då exakt " + array_bankrån[13] + " " + array_bankrån[14] + " att ta oss in i och rensa valvet innan polisen kommer. Om någon inifrån banken försöker göra motstånd så har jag " + array_bankrån[15] + " " + array_bankrån[16] + " med mig som vi kan använda oss av för att stoppa potentiellt motstånd. Vi vill inte riskera att använda våra " + array_bankrån[12] + " om det inte är absolut nödsituation. Kom ihåg det är endast dom extremt värdefulla " + array_bankrån[17] + " som vi vill åt, inget annat. Vi springer sen ut genom bakvägen till " + array_bankrån[18] + "  och kör iväg, sedan delar vi upp oss och möts vid " + array_bankrån[19] + " så vi kan dela upp bytet. Det är planen och vi genomför den på " + array_bankrån[20] + "."
+                textStory_bankrån = "Okej, det här är den " + array_bankrån[0] + " planen jag kom på, jag har arbetat med den i " + array_bankrån[1] + " " + array_bankrån[2] + " så den kommer definitivt med " + array_bankrån[3] + " procent sannolikhet att fungera. Det här är planen, " + array_bankrån[4] + " du klär ut dig till " + array_bankrån[5] + ", går in till banken, ställer dig på en stol och " + array_bankrån[6] + " samtidigt som du skriker ut '" + array_bankrån[7] + "'. Allt detta för att skapa en distraktion för " + array_bankrån[8] + " vars uppgift är sno vaktens vapen, om du blir påkommen är planen att snabbt börja " + array_bankrån[9] + " med vakten och under tiden köra in en spruta med sömnmedel i vaktens " + array_bankrån[10] + ". Då vakten är neutraliserad så kommer jag och " + array_bankrån[11] + " in, tar upp våra " + array_bankrån[12] + " och hotar bankpersonalen att ge oss koden till valvet. Vi har då exakt " + array_bankrån[13] + " " + array_bankrån[14] + " att ta oss in i och rensa valvet innan polisen kommer. Om någon inifrån banken försöker göra motstånd så har jag " + array_bankrån[15] + " " + array_bankrån[16] + " med mig som vi kan använda oss av för att stoppa potentiellt motstånd. Vi vill inte riskera att använda våra " + array_bankrån[12] + " om det inte är absolut nödsituation. Kom ihåg det är endast dom extremt värdefulla " + array_bankrån[17] + "na som vi vill åt, inget annat. Vi springer sen ut genom bakvägen till " + array_bankrån[18] + " och kör iväg, sedan delar vi upp oss och möts vid " + array_bankrån[19] + " så vi kan dela upp bytet. Det är planen och vi genomför den på " + array_bankrån[20] + "."
                 input_text_bankrån.setText("")
 
             } else {
@@ -86,8 +86,7 @@ val random_generator = com.example.spens.mad_lib_design_2.random_generator()
                 input_text_bankrån.visibility = View.INVISIBLE
                 tips_text_banrån.visibility = View.INVISIBLE
                 tips_title_bankrån.visibility = View.INVISIBLE
-                continue_button.visibility = View.VISIBLE
-                array_bankrån = arrayOf("Adjektiv som slutar på: a", "Siffra", "Tidsenhet", "Siffra", "Dåligt artistnamn", "Superhjälte", "Verb som slutar på: ar", "Känt citat", "Namn på hundvalp", "Verb som slutar på: a", "Kroppsdel", "Skurk", "Vapen i plural", "Siffra", "Tidsenhet", "Siffra", "Substantiv i plural", "Substantiv i plural som slutar på:a", "Fordon som slutar på: n", "Geografisk plats", "Högtid", "")
+                array_bankrån = arrayOf("Adjektiv som slutar på: a", "Siffra", "Tidsenhet", "Siffra", "Dåligt artistnamn", "Superhjälte", "Verb som slutar på: ar", "Känt citat", "Namn på hundvalp", "Verb som slutar på: a", "Kroppsdel", "Skurk", "Vapen i plural", "Siffra", "Tidsenhet", "Siffra", "Substantiv i plural", "Substantiv i plural som slutar på: a", "Fordon som slutar på: n", "Geografisk plats", "Högtid", "")
 
                 val imm = getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
                 imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY,0)

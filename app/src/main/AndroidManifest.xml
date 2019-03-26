@@ -9,7 +9,18 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".matlagning">
+        <activity android:name=".choose_text2">
+        </activity>
+        <activity
+                android:name=".karleksbrev"
+                android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".nyheter"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+                android:name=".matlagning"
+                android:screenOrientation="portrait">
         </activity>
         <activity
                 android:name=".lekprogram"
@@ -47,8 +58,6 @@
         <activity
                 android:name=".bankran"
                 android:screenOrientation="portrait">
-        </activity>
-        <activity android:name=".saga">
         </activity>
         <activity
                 android:name=".jobbintervju"

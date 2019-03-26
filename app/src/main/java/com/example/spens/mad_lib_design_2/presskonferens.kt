@@ -73,7 +73,6 @@ class presskonferens : AppCompatActivity() {
                 desc_text_presskonferns.visibility = View.INVISIBLE
                 confirm_button_presskonferns.visibility = View.INVISIBLE
                 input_text_presskonferns.visibility = View.INVISIBLE
-                continue_button_presskonferens.visibility = View.VISIBLE
                 array_presskonferens = arrayOf("Namn på en tecknad figur", "Tidsenhet", "Beskrivning på en person","Siffra", "Mätenhet", "Färg","Siffra","Tidsenhet","Geografisk plats", "Substantiv", "Kroppsdel","Namn på känd person","Högtid","Årtal","Namn på känd plats", "Substantiv i singular", "Kroppsdel i bestämd form","Siffra","Historisk person", "Resturang", "Siffra","Tidsenhet i singular","")
                 tips_text_presskonferens.visibility = View.INVISIBLE
                 tips_title_presskonferens.visibility = View.INVISIBLE

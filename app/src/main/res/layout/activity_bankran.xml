@@ -10,14 +10,14 @@
 
     <TextView
             android:text="Bankrån"
-            android:layout_width="115dp"
-            android:layout_height="34dp"
+            android:layout_width="101sp"
+            android:layout_height="31sp"
             android:id="@+id/textView2"
-            android:textAllCaps="true" app:fontFamily="@font/antic_slab" android:textSize="24sp"
+            android:textAllCaps="true" app:fontFamily="@font/source_sans_pro_semibold" android:textSize="24sp"
             android:layout_marginEnd="8dp"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp" android:layout_marginStart="8dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
-            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="24dp"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="16dp"
     />
     <EditText
             android:layout_width="wrap_content"
@@ -46,7 +46,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintVertical_bias="0.441"
-            android:textSize="18sp" app:fontFamily="@font/antic_slab"/>
+            android:textSize="18sp" app:fontFamily="@font/source_sans_pro_semibold"/>
     <Button
             android:text="Spela"
             android:layout_width="98dp"
@@ -58,7 +58,7 @@
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp" android:layout_marginStart="8dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp" android:layout_marginTop="8dp"
             app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent" android:typeface="monospace"/>
+            app:layout_constraintBottom_toBottomOf="parent"/>
     <ImageButton
             android:layout_width="33dp"
             android:layout_height="35dp" app:srcCompat="@drawable/ic_keyboard_arrow_left_orange_24dp"
@@ -87,7 +87,7 @@
         <TextView
                 android:id="@+id/text_story_bankrån" android:textSize="16sp"
                 android:textColor="@android:color/darker_gray"
-                app:fontFamily="@font/antic_slab"
+                app:fontFamily="@font/source_sans_pro_semibold"
                 android:layout_marginTop="62dp"
                 app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="72dp"
                 app:layout_constraintBottom_toBottomOf="parent" android:layout_marginStart="17dp"
@@ -107,7 +107,7 @@
             android:layout_width="162dp"
             android:layout_height="41dp"
             android:id="@+id/antal_ord_bankrån"
-            android:textSize="20sp" app:fontFamily="@font/antic_slab"
+            android:textSize="20sp" app:fontFamily="@font/source_sans_pro_semibold"
             android:layout_marginTop="8dp"
             app:layout_constraintTop_toTopOf="parent" android:layout_marginEnd="112dp"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="112dp"
@@ -156,7 +156,8 @@
             android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginTop="224dp"
-            app:layout_constraintTop_toTopOf="parent" app:fontFamily="@font/antic_slab" android:textAllCaps="false"
+            app:layout_constraintTop_toTopOf="parent" app:fontFamily="@font/source_sans_pro_semibold"
+            android:textAllCaps="false"
             app:layout_constraintHorizontal_bias="0.495" android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.008"/>
 
@@ -179,7 +180,7 @@
 
     <TextView
             android:text="Tips"
-            android:layout_width="41dp"
+            android:layout_width="36dp"
             android:layout_height="23dp"
             android:id="@+id/tips_title_bankrån" android:textAllCaps="false"
             android:textStyle="bold" android:textSize="18sp"
@@ -189,8 +190,8 @@
             android:layout_marginTop="192dp"
             app:layout_constraintTop_toTopOf="parent"
             android:textColor="@color/colorAccent" android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.494"
-            app:layout_constraintVertical_bias="0.007"/>
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintVertical_bias="0.0" app:fontFamily="@font/source_sans_pro_semibold"/>
     <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" app:srcCompat="@drawable/ic_arrow_forward_black_24dp"

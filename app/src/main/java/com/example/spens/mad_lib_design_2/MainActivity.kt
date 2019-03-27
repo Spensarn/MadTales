@@ -26,14 +26,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        buttonEffect(kör_button)
+        //buttonEffect(start)
 
-
-        kör_button.setOnClickListener {
+        start.setOnClickListener {
             val intent = Intent(this, choose_text2::class.java)
             startActivity(intent)
         }
-
 
 
         btn = findViewById<View>(R.id.hur_man_spelar) as ImageButton

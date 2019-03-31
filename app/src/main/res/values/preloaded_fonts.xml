@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="preloaded_fonts" translatable="false">
+        <item>@font/</item>
+        <item>@font/acme</item>
+        <item>@font/andika</item>
         <item>@font/antic_slab</item>
         <item>@font/josefin_sans_semibold_italic</item>
         <item>@font/josefin_sans_thin</item>

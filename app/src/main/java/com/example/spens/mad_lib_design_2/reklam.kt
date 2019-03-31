@@ -58,10 +58,7 @@ class reklam : AppCompatActivity() {
             spela_button_reklam.visibility = View.INVISIBLE
             desc_text_reklam.setText(array_reklam[counter])
             antal_ord_reklam.visibility = View.INVISIBLE
-            procent_dislike_reklam.visibility = View.INVISIBLE
-            procent_like_reklam.visibility = View.INVISIBLE
-            //like_image_företagspitch.visibility = View.INVISIBLE
-            //dislike_image_företagspitch.visibility = View.INVISIBLE
+
 
 
             counter++

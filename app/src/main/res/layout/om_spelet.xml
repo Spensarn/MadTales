@@ -1,31 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
-              android:layout_height="225dp"
+              android:layout_height="295dp"
               android:orientation="vertical"
               android:padding="5dp"
               android:background="@color/cardview_dark_background">
 
     <TextView
             android:text="Om MadTales"
-            android:layout_width="273dp"
-            android:layout_marginHorizontal="120dp"
+            android:layout_width="170sp"
+            android:layout_marginHorizontal="110sp"
             android:layout_height="wrap_content"
             android:id="@+id/textView5"
             android:textSize="24sp"
-            app:fontFamily="@font/source_sans_pro_semibold" android:textColor="#2196F3"/>
+            app:fontFamily="@font/andika" android:textColor="#2196F3"/>
     <ImageView
-            android:layout_width="356dp"
-            android:layout_margin="10dp"
+            android:layout_width="342sp"
+            android:layout_margin="10sp"
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/ic_info_black_24dp"
             android:id="@+id/imageView2"/>
+
     <TextView android:layout_width="wrap_content"
               android:layout_height="wrap_content"
-              android:text="MadTales är ett spel för alla, är du lite kreativ och har ett gott sinne för humor kan du eller dom du spelar med få sig ett gott skratt"
+              android:text="MadTales är ett spel för alla, är du lite kreativ och har ett gott sinne för humor kan du eller dom du spelar med få sig ett gott skratt."
               android:textSize="18sp"
-              app:fontFamily="@font/source_sans_pro_semibold"
-              android:layout_margin="5dp" android:textColor="#2196F3"/>
+              app:fontFamily="@font/andika"
+              android:layout_margin="5sp" android:textColor="#2196F3"/>
 
     <ImageButton android:layout_width="35dp"
                  android:layout_height="35dp"

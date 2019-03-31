@@ -3,7 +3,7 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="315dp"
+        android:layout_height="390dp"
         android:orientation="vertical"
         android:padding="5dp"
         android:background="@color/cardview_dark_background"
@@ -12,15 +12,15 @@
 
     <TextView
             android:text="Hur spelar man?"
-            android:layout_width="399dp"
+            android:layout_width="399sp"
             android:layout_marginHorizontal="100dp"
             android:layout_height="wrap_content"
             android:id="@+id/textView3" android:textSize="24sp"
-            app:fontFamily="@font/source_sans_pro_semibold"
+            app:fontFamily="@font/andika"
             android:textAllCaps="false" android:textColor="#4CAF50"/>
     <ImageView
-            android:layout_width="339dp"
-            android:layout_margin="10dp"
+            android:layout_width="349sp"
+            android:layout_margin="10sp"
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/ic_help_black_24dp"
             android:id="@+id/imageView3"/>
@@ -28,9 +28,9 @@
     <TextView android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:text="Välj en text i textmenyn, sedan dycker lite information  om texten upp. Välj sedan 'spela' och ett ord eller en mening dycker upp, där ska ett ord ska skrivas som följer beskriviningen. Tillslut kommer en text upp där de valda orden är instatta och det blir en fullkomlig klar text."
-              android:layout_margin="5dp"
+              android:layout_margin="5sp"
               android:textSize="18sp"
-              app:fontFamily="@font/source_sans_pro_semibold" android:textColor="#4CAF50"/>
+              app:fontFamily="@font/andika" android:textColor="#4CAF50"/>
     <ImageButton
             android:layout_width="34dp"
             android:layout_height="35dp"

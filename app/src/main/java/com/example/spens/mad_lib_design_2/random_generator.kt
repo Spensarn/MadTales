@@ -17,13 +17,13 @@ class random_generator{
             textView.setText("Använd ovanliga och kreativa ord för att få en roligare och mer underhållande text!")
         }
         if(random == 1){
-            textView.setText("Det finns inga regler i detta spel. Tolka allt på ditt eget vis!")
+            textView.setText("Det finns inga regler i detta spel, tolka allt på ditt eget vis!")
         }
         if(random == 2){
             textView.setText("Var kreativ! Hitta på olika sätt att spela och gör egna regler!")
         }
         if(random == 3)
-            textView.setText("Spelar ni i ett sällskap? Involvera alla i sällskapet!")
+            textView.setText("Om ni spelar i ett sällskap, försök då att involvera alla i sällskapet!")
     }
 
 

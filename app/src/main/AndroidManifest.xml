@@ -9,9 +9,11 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".start">
+        <activity android:name=".start"
+                  android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".choose_text2">
+        <activity android:name=".choose_text2"
+                  android:screenOrientation="portrait">
         </activity>
         <activity
                 android:name=".karleksbrev"

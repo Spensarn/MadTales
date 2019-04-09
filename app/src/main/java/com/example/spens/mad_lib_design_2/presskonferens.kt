@@ -21,14 +21,14 @@ class presskonferens : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_presskonferens)
-        array_presskonferens = arrayOf("Namn på en tecknad figur", "Tidsenhet", "Beskrivning på en person","Siffra", "Mätenhet", "Färg","Siffra","Tidsenhet","Geografisk plats", "Substantiv", "Kroppsdel","Namn på känd person","Högtid","Årtal","Namn på känd plats", "Substantiv i singular", "Kroppsdel i bestämd form","Siffra","Historisk person", "Resturang", "Siffra","Tidsenhet i singular","")
+        array_presskonferens = arrayOf("Namn på en tecknad figur", "Tidsenhet", "Beskrivning på en person","Siffra", "Mätenhet", "Färg","Siffra","Tidsenhet","Geografisk plats", "Substantiv", "Kroppsdel i plural","Namn på känd person","Högtid","Årtal","Namn på känd plats", "Substantiv i singular", "Kroppsdel i bestämd form","Siffra","Historisk person", "Resturang", "Siffra","Tidsenhet i singular","")
 
         random_generator.random_tips(tips_text_presskonferens)
 
         progressBar_presskonferens.progress = 0
 
         back_button_presskonferns.setOnClickListener {
-            array_presskonferens = arrayOf("Namn på en tecknad figur", "Tidsenhet", "Beskrivning på en person","Siffra", "Mätenhet", "Färg","Siffra","Tidsenhet","Geografisk plats", "Substantiv", "Kroppsdel","Namn på känd person","Högtid","Årtal","Namn på känd plats", "Substantiv i singular", "Kroppsdel i bestämd form","Siffra","Historisk person", "Resturang", "Siffra","Tidsenhet i singular","")
+            array_presskonferens = arrayOf("Namn på en tecknad figur", "Tidsenhet", "Beskrivning på en person","Siffra", "Mätenhet", "Färg","Siffra","Tidsenhet","Geografisk plats", "Substantiv", "Kroppsdel i plural","Namn på känd person","Högtid","Årtal","Namn på känd plats", "Substantiv i singular", "Kroppsdel i bestämd form","Siffra","Historisk person", "Resturang", "Siffra","Tidsenhet i singular","")
 
             AlertDialog.Builder(this)
                 .setMessage("Vill du avsluta? Ändringar kommer inte att sparas!")
@@ -58,7 +58,7 @@ class presskonferens : AppCompatActivity() {
                 desc_text_presskonferns.setText(array_presskonferens[counter_presskonferens])
                 array_presskonferens[counter_presskonferens - 1] = input_text_presskonferns.getText().toString()
                 counter_presskonferens++
-                textStory_presskonferens = "God kväll, jag heter " + array_presskonferens[0] + " och är huvudansvarig för denna mordutredning. Jag och mitt team har arbetat i många " + array_presskonferens[1] + " för att få fram en " + array_presskonferens[2] + " och bra beskrivning på mördaren. Det vi i nuläget vet är att mördaren antagligen är " + array_presskonferens[3] + " " + array_presskonferens[4] + " lång, har " + array_presskonferens[5] + " hårfärg, är cirka " + array_presskonferens[6] + " " + array_presskonferens[7] + " gammal, bor i " + array_presskonferens[8] + " och har av vittnen blivit sedd ha en " + array_presskonferens[9] + " hängandes kring sin " + array_presskonferens[10] + ". Vi har kommit fram till att mordet på " + array_presskonferens[11] + " ägt rum på " + array_presskonferens[12] + " " + array_presskonferens[13] + ". Brottet skedde i " + array_presskonferens[14] + ". Vapnet som mördaren ska ha använt var en/ett " + array_presskonferens[15] + ". Vapnet ska ha använts på så sätt att mördaren slog offret 10 gånger på " + array_presskonferens[16] + " vilket tillslut ledde till offrets död. Vi har just nu " + array_presskonferens[17] + " bevis som pekar på att brottet har begåtts av " + array_presskonferens[18] + ". Dock behöver vi ännu mer bevis för att vara säkra. Vi har ännu inte hittat brottslingen men enligt en trovärdig källa besöker mördaren " + array_presskonferens[19] + " " + array_presskonferens[20] + " gånger varje " + array_presskonferens[21] + ". Så vi räknar med ett gripande inom kort. Tack för mig!"
+                textStory_presskonferens = "God kväll, jag heter " + array_presskonferens[0] + " och är huvudansvarig för denna mordutredning. Jag och mitt team har arbetat i många " + array_presskonferens[1] + " för att få fram en " + array_presskonferens[2] + " och bra beskrivning på mördaren. Det vi i nuläget vet är att mördaren antagligen är " + array_presskonferens[3] + " " + array_presskonferens[4] + " lång, har " + array_presskonferens[5] + " hårfärg, är cirka " + array_presskonferens[6] + " " + array_presskonferens[7] + " gammal, bor i " + array_presskonferens[8] + " och har av vittnen blivit sedd ha en " + array_presskonferens[9] + " hängandes kring sina " + array_presskonferens[10] + ". Vi har kommit fram till att mordet på " + array_presskonferens[11] + " ägt rum på " + array_presskonferens[12] + " " + array_presskonferens[13] + ". Brottet skedde i " + array_presskonferens[14] + ". Vapnet som mördaren ska ha använt var en " + array_presskonferens[15] + ". Vapnet ska ha använts på så sätt att mördaren slog offret 10 gånger på " + array_presskonferens[16] + " vilket tillslut ledde till offrets död. Vi har just nu " + array_presskonferens[17] + " bevis som pekar på att brottet har begåtts av " + array_presskonferens[18] + ". Dock behöver vi ännu mer bevis för att vara säkra. Vi har ännu inte hittat brottslingen men enligt en trovärdig källa besöker mördaren " + array_presskonferens[19] + " " + array_presskonferens[20] + " gånger varje " + array_presskonferens[21] + ". Så vi räknar med ett gripande inom kort. Tack för mig!"
                 input_text_presskonferns.setText("")
 
 
@@ -73,7 +73,7 @@ class presskonferens : AppCompatActivity() {
                 desc_text_presskonferns.visibility = View.INVISIBLE
                 confirm_button_presskonferns.visibility = View.INVISIBLE
                 input_text_presskonferns.visibility = View.INVISIBLE
-                array_presskonferens = arrayOf("Namn på en tecknad figur", "Tidsenhet", "Beskrivning på en person","Siffra", "Mätenhet", "Färg","Siffra","Tidsenhet","Geografisk plats", "Substantiv", "Kroppsdel","Namn på känd person","Högtid","Årtal","Namn på känd plats", "Substantiv i singular", "Kroppsdel i bestämd form","Siffra","Historisk person", "Resturang", "Siffra","Tidsenhet i singular","")
+                array_presskonferens = arrayOf("Namn på en tecknad figur", "Tidsenhet", "Beskrivning på en person","Siffra", "Mätenhet", "Färg","Siffra","Tidsenhet","Geografisk plats", "Substantiv", "Kroppsdel i plural","Namn på känd person","Högtid","Årtal","Namn på känd plats", "Substantiv i singular", "Kroppsdel i bestämd form","Siffra","Historisk person", "Resturang", "Siffra","Tidsenhet i singular","")
                 tips_text_presskonferens.visibility = View.INVISIBLE
                 tips_title_presskonferens.visibility = View.INVISIBLE
 
@@ -85,8 +85,6 @@ class presskonferens : AppCompatActivity() {
                     startActivity(intent)
                 }
             }
-
-
         }
 
     }

@@ -24,7 +24,7 @@ val random_generator = com.example.spens.mad_lib_design_2.random_generator()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_bankran)
-        array_bankrån = arrayOf("Adjektiv som slutar på: a", "Siffra", "Tidsenhet", "Siffra", "Dåligt artistnamn", "Superhjälte", "Verb som slutar på: ar", "Känt citat", "Namn på hundvalp", "Verb som slutar på: a", "Kroppsdel", "Skurk", "Vapen i plural", "Siffra", "Tidsenhet", "Siffra", "Substantiv i plural", "Substantiv i plural som slutar på: a", "Fordon som slutar på: n", "Geografisk plats", "Högtid", "")
+        array_bankrån = arrayOf("Adjektiv som slutar på: a", "Siffra", "Tidsenhet", "Siffra", "Dåligt artistnamn", "Superhjälte", "Verb som slutar på: ar", "Känt citat", "Namn på hundvalp", "Verb som slutar på: a", "Kroppsdel", "Skurk", "Vapen i plural", "Siffra", "Tidsenhet i plural", "Siffra", "Substantiv i plural", "Substantiv i plural som slutar på: a", "Fordon i bestämd form", "Geografisk plats", "Högtid", "")
 
         progressBar_bankrån.progress = 0
 
@@ -33,7 +33,7 @@ val random_generator = com.example.spens.mad_lib_design_2.random_generator()
         buttonEffect(spela_button_bankrån)
 
         back_button_bankrån.setOnClickListener {
-            array_bankrån = arrayOf("Adjektiv som slutar på: a", "Siffra", "Tidsenhet", "Siffra", "Dåligt artistnamn", "Superhjälte", "Verb som slutar på: ar", "Känt citat", "Namn på hundvalp", "Verb som slutar på: a", "Kroppsdel", "Skurk", "Vapen i plural", "Siffra", "Tidsenhet", "Siffra", "Substantiv i plural", "Substantiv i plural som slutar på: a", "Fordon som slutar på: n", "Geografisk plats", "Högtid", "")
+            array_bankrån = arrayOf("Adjektiv som slutar på: a", "Siffra", "Tidsenhet", "Siffra", "Dåligt artistnamn", "Superhjälte", "Verb som slutar på: ar", "Känt citat", "Namn på hundvalp", "Verb som slutar på: a", "Kroppsdel", "Skurk", "Vapen i plural", "Siffra", "Tidsenhet i plural", "Siffra", "Substantiv i plural", "Substantiv i plural som slutar på: a", "Fordon i bestämd form", "Geografisk plats", "Högtid", "")
 
             AlertDialog.Builder(this)
                 .setMessage("Vill du avsluta? Ändringar kommer inte att sparas!")
@@ -86,7 +86,7 @@ val random_generator = com.example.spens.mad_lib_design_2.random_generator()
                 input_text_bankrån.visibility = View.INVISIBLE
                 tips_text_banrån.visibility = View.INVISIBLE
                 tips_title_bankrån.visibility = View.INVISIBLE
-                array_bankrån = arrayOf("Adjektiv som slutar på: a", "Siffra", "Tidsenhet", "Siffra", "Dåligt artistnamn", "Superhjälte", "Verb som slutar på: ar", "Känt citat", "Namn på hundvalp", "Verb som slutar på: a", "Kroppsdel", "Skurk", "Vapen i plural", "Siffra", "Tidsenhet", "Siffra", "Substantiv i plural", "Substantiv i plural som slutar på: a", "Fordon som slutar på: n", "Geografisk plats", "Högtid", "")
+                array_bankrån = arrayOf("Adjektiv som slutar på: a", "Siffra", "Tidsenhet", "Siffra", "Dåligt artistnamn", "Superhjälte", "Verb som slutar på: ar", "Känt citat", "Namn på hundvalp", "Verb som slutar på: a", "Kroppsdel", "Skurk", "Vapen i plural", "Siffra", "Tidsenhet i plural", "Siffra", "Substantiv i plural", "Substantiv i plural som slutar på: a", "Fordon i bestämd form", "Geografisk plats", "Högtid", "")
 
                 val imm = getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
                 imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY,0)

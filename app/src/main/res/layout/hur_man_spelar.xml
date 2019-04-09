@@ -3,7 +3,7 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="390dp"
+        android:layout_height="325dp"
         android:orientation="vertical"
         android:padding="5dp"
         android:background="@color/cardview_dark_background"
@@ -27,7 +27,7 @@
 
     <TextView android:layout_width="wrap_content"
               android:layout_height="wrap_content"
-              android:text="Välj en text i textmenyn, sedan dycker lite information  om texten upp. Välj sedan 'spela' och ett ord eller en mening dycker upp, där ska ett ord ska skrivas som följer beskriviningen. Tillslut kommer en text upp där de valda orden är instatta och det blir en fullkomlig klar text."
+              android:text="MadTales går ut på att spelaren skriver in ett ord eller en mening som stämmer överens med en beskrivning. Ordet eller meningen spelaren skriver in sätts då in i en text som sedan går att läsas upp. "
               android:layout_margin="5sp"
               android:textSize="18sp"
               app:fontFamily="@font/andika" android:textColor="#4CAF50"/>

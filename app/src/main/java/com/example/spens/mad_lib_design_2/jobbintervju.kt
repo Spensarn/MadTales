@@ -27,11 +27,11 @@ class jobbintervju : AppCompatActivity() {
 
         progressBar_jobbintervju.progress = 0
 
-        array_jobbintervju = arrayOf(" Skådespelare","Namn på en historisk figur","Typ av arbete","Något du säger när du är i knipa","Typ av spel","Yrke man hade förr i tiden","Tidsspann","Namn på företag","Siffra","Valuta","Något du säger när du blir chockad","Adjektiv","Siffra"," Badrumsartikel i plural","Djur i plural","Typ av släkting","Namn","Siffra","Substantiv i plural","Siffra","Kroppsdel i bestämd form"," Tidsspan","Låt","")
+        array_jobbintervju = arrayOf(" Skådespelare","Namn på en historisk figur","Typ av arbete","Något du säger när du är i knipa","Typ av spel","Yrke man hade förr i tiden","Tidsspann","Namn på företag","Siffra","Valuta","Något du säger när du blir chockad","Adjektiv","Siffra"," Badrumsartikel i plural","Djur i plural","Typ av släkting","Namn","Siffra","Substantiv i plural","Siffra","Kroppsdel i bestämd form"," Tidsspann","Låt","")
 
 
         back_button_jobbintervju.setOnClickListener {
-            array_jobbintervju = arrayOf(" Skådespelare","Namn på en historisk figur","Typ av arbete","Något du säger när du är i knipa","Typ av spel","Yrke man hade förr i tiden","Tidsspann","Namn på företag","Siffra","Valuta","Något du säger när du blir chockad","Adjektiv","Siffra"," Badrumsartikel i plural","Djur i plural","Typ av släkting","Namn","Siffra","Substantiv i plural","Siffra","Kroppsdel i bestämd form"," Tidsspan","Låt","")
+            array_jobbintervju = arrayOf(" Skådespelare","Namn på en historisk figur","Typ av arbete","Något du säger när du är i knipa","Typ av spel","Yrke man hade förr i tiden","Tidsspann","Namn på företag","Siffra","Valuta","Något du säger när du blir chockad","Adjektiv","Siffra"," Badrumsartikel i plural","Djur i plural","Typ av släkting","Namn","Siffra","Substantiv i plural","Siffra","Kroppsdel i bestämd form"," Tidsspann","Låt","")
 
             AlertDialog.Builder(this)
                 .setMessage("Vill du avsluta? Ändringar kommer inte att sparas!")
@@ -76,7 +76,7 @@ class jobbintervju : AppCompatActivity() {
                 desc_text_jobbintervju.visibility = View.INVISIBLE
                 confirm_button_jobbintervju.visibility = View.INVISIBLE
                 input_text_jobbintervju.visibility = View.INVISIBLE
-                array_jobbintervju = arrayOf(" Skådespelare","Namn på en historisk figur","Typ av arbete","Något du säger när du är i knipa","Typ av spel","Yrke man hade förr i tiden","Tidsspann","Namn på företag","Siffra","Valuta","Något du säger när du blir chockad","Adjektiv","Siffra"," Badrumsartikel i plural","Djur i plural","Typ av släkting","Namn","Siffra","Substantiv i plural","Siffra","Kroppsdel i bestämd form"," Tidsspan","Låt","")
+                array_jobbintervju = arrayOf(" Skådespelare","Namn på en historisk figur","Typ av arbete","Något du säger när du är i knipa","Typ av spel","Yrke man hade förr i tiden","Tidsspann","Namn på företag","Siffra","Valuta","Något du säger när du blir chockad","Adjektiv","Siffra"," Badrumsartikel i plural","Djur i plural","Typ av släkting","Namn","Siffra","Substantiv i plural","Siffra","Kroppsdel i bestämd form"," Tidsspann","Låt","")
                 tips_text_jobbintervju.visibility = View.INVISIBLE
                 tips_title_jobbintervju.visibility = View.INVISIBLE
 

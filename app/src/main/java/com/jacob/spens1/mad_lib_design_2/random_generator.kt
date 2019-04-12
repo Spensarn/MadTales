@@ -1,10 +1,6 @@
-package com.example.spens.mad_lib_design_2
+package com.jacob.spens1.mad_lib_design_2
 
-import android.widget.Button
 import android.widget.TextView
-import kotlinx.android.synthetic.main.activity_reklam.*
-import android.R
-
 
 
 class random_generator{

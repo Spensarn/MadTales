@@ -1,4 +1,4 @@
-package com.example.spens.mad_lib_design_2
+package com.jacob.spens1.mad_lib_design_2
 
 import org.junit.Test
 

@@ -18,10 +18,11 @@
             android:layout_marginTop="16dp"
             app:layout_constraintTop_toTopOf="parent" android:layout_marginEnd="8dp"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp"
-            app:layout_constraintHorizontal_bias="0.498"/>
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/jobbintervju_b" app:layout_constraintVertical_bias="1.0"/>
     <ImageButton
             android:layout_width="125dp"
-            android:layout_height="134dp" app:srcCompat="@drawable/bankran"
+            android:layout_height="125dp" app:srcCompat="@drawable/bankran"
             android:scaleType="fitXY"
             android:background="@null"
             android:id="@+id/bankrån_b"
@@ -34,7 +35,7 @@
             app:layout_constraintTop_toBottomOf="@+id/presskonferens_b"/>
     <ImageButton
             android:layout_width="125dp"
-            android:layout_height="134dp" app:srcCompat="@drawable/foretagspitch"
+            android:layout_height="125dp" app:srcCompat="@drawable/foretagspitch"
             android:scaleType="fitXY"
             android:background="@null"
             android:id="@+id/företagspitch_b"
@@ -47,7 +48,7 @@
             app:layout_constraintTop_toBottomOf="@+id/bankrån_b"/>
     <ImageButton
             android:layout_width="125dp"
-            android:layout_height="134dp" app:srcCompat="@drawable/nyheter"
+            android:layout_height="125dp" app:srcCompat="@drawable/nyheter"
             android:scaleType="fitXY"
             android:background="@null"
             android:id="@+id/nyheter_b"
@@ -60,7 +61,7 @@
             app:layout_constraintTop_toBottomOf="@+id/matlagning_b"/>
     <ImageButton
             android:layout_width="125dp"
-            android:layout_height="134dp" app:srcCompat="@drawable/kommersnart"
+            android:layout_height="125dp" app:srcCompat="@drawable/kommersnart"
             android:scaleType="fitXY"
             android:background="@null"
             android:id="@+id/nyheter_b2"
@@ -73,7 +74,7 @@
             app:layout_constraintTop_toBottomOf="@+id/reklam_b" app:layout_constraintHorizontal_bias="1.0"/>
     <ImageButton
             android:layout_width="125dp"
-            android:layout_height="134dp" app:srcCompat="@drawable/kommersnart"
+            android:layout_height="125dp" app:srcCompat="@drawable/kommersnart"
             android:scaleType="fitXY"
             android:background="@null"
             android:id="@+id/nyheter_b3"
@@ -86,7 +87,7 @@
             app:layout_constraintTop_toBottomOf="@+id/företagspitch_b" app:layout_constraintHorizontal_bias="0.0"/>
     <ImageButton
             android:layout_width="125dp"
-            android:layout_height="134dp" app:srcCompat="@drawable/kommersnart"
+            android:layout_height="125dp" app:srcCompat="@drawable/kommersnart"
             android:scaleType="fitXY"
             android:background="@null"
             android:id="@+id/nyheter_b4"
@@ -99,7 +100,7 @@
             app:layout_constraintTop_toBottomOf="@+id/nyheter_b"/>
     <ImageButton
             android:layout_width="125dp"
-            android:layout_height="134dp" app:srcCompat="@drawable/kommersnart"
+            android:layout_height="125dp" app:srcCompat="@drawable/kommersnart"
             android:scaleType="fitXY"
             android:background="@null"
             android:id="@+id/nyheter_b5"
@@ -112,7 +113,7 @@
             app:layout_constraintTop_toBottomOf="@+id/nyheter_b2" app:layout_constraintHorizontal_bias="1.0"/>
     <ImageButton
             android:layout_width="125dp"
-            android:layout_height="134dp" app:srcCompat="@drawable/presskonferens"
+            android:layout_height="125dp" app:srcCompat="@drawable/presskonferens"
             android:scaleType="fitXY"
             android:background="@null"
             android:id="@+id/presskonferens_b"
@@ -124,7 +125,7 @@
             app:layout_constraintVertical_bias="0.08"/>
     <ImageButton
             android:layout_width="125dp"
-            android:layout_height="134dp" app:srcCompat="@drawable/jobbintervju"
+            android:layout_height="125dp" app:srcCompat="@drawable/jobbintervju"
             android:scaleType="fitXY"
             android:background="@null"
             android:id="@+id/jobbintervju_b"
@@ -136,7 +137,7 @@
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"/>
     <ImageButton
             android:layout_width="125dp"
-            android:layout_height="134dp" app:srcCompat="@drawable/karleksbrev"
+            android:layout_height="125dp" app:srcCompat="@drawable/karleksbrev"
             android:scaleType="fitXY"
             android:background="@null"
             android:id="@+id/kärleksbrev_b"
@@ -149,7 +150,7 @@
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"/>
     <ImageButton
             android:layout_width="125dp"
-            android:layout_height="134dp" app:srcCompat="@drawable/matlagning"
+            android:layout_height="125dp" app:srcCompat="@drawable/matlagning"
             android:scaleType="fitXY"
             android:background="@null"
             android:id="@+id/matlagning_b"
@@ -162,7 +163,7 @@
             app:layout_constraintTop_toBottomOf="@+id/jobbintervju_b"/>
     <ImageButton
             android:layout_width="125dp"
-            android:layout_height="134dp" app:srcCompat="@drawable/reklam"
+            android:layout_height="125dp" app:srcCompat="@drawable/reklam"
             android:scaleType="fitXY"
             android:background="@null"
             android:id="@+id/reklam_b"

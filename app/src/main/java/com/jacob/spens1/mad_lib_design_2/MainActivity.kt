@@ -1,19 +1,15 @@
-package com.example.spens.mad_lib_design_2
+package com.jacob.spens1.mad_lib_design_2
 
 import android.app.Dialog
 import android.content.Intent
 import android.graphics.PorterDuff
-import android.graphics.drawable.AnimationDrawable
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MotionEvent
 import android.view.View
 import android.view.Window
-import android.widget.Button
 import android.widget.ImageButton
-import android.widget.TextView
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_main.view.*
 
 class MainActivity : AppCompatActivity() {
 

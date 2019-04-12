@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.example.spens.mad_lib_design_2">
+          package="com.jacob.spens1.mad_lib_design_2">
 
     <application
             android:allowBackup="true"
@@ -9,42 +9,42 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".start"
+        <activity android:name="com.jacob.spens1.mad_lib_design_2.start"
                   android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".choose_text2"
+        <activity android:name="com.jacob.spens1.mad_lib_design_2.choose_text2"
                   android:screenOrientation="portrait">
         </activity>
         <activity
-                android:name=".karleksbrev"
+                android:name="com.jacob.spens1.mad_lib_design_2.karleksbrev"
                 android:screenOrientation="portrait">
         </activity>
         <activity
-                android:name=".nyheter"
+                android:name="com.jacob.spens1.mad_lib_design_2.nyheter"
                 android:screenOrientation="portrait">
         </activity>
         <activity
-                android:name=".matlagning"
+                android:name="com.jacob.spens1.mad_lib_design_2.matlagning"
                 android:screenOrientation="portrait">
         </activity>
         <activity
-                android:name=".lekprogram"
+                android:name="com.jacob.spens1.mad_lib_design_2.lekprogram"
                 android:screenOrientation="portrait">
         </activity>
         <activity
-                android:name=".klassatertraff"
+                android:name="com.jacob.spens1.mad_lib_design_2.klassatertraff"
                 android:screenOrientation="portrait">
         </activity>
         <activity
-                android:name=".reklam"
+                android:name="com.jacob.spens1.mad_lib_design_2.reklam"
                 android:screenOrientation="portrait">
         </activity>
         <activity
-                android:name=".jakt"
+                android:name="com.jacob.spens1.mad_lib_design_2.jakt"
                 android:screenOrientation="portrait">
         </activity>
         <activity
-                android:name=".dejt"
+                android:name="com.jacob.spens1.mad_lib_design_2.dejt"
                 android:screenOrientation="portrait">
         </activity>
 
@@ -52,34 +52,34 @@
                 android:name="org.apache.http.legacy"
                 android:required="false"/>
 
-        <activity android:name=".two_player_test">
+        <activity android:name="com.jacob.spens1.mad_lib_design_2.two_player_test">
         </activity>
         <activity
-                android:name=".foretagspitch"
+                android:name="com.jacob.spens1.mad_lib_design_2.foretagspitch"
                 android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".continue_screen_bankran">
+        <activity android:name="com.jacob.spens1.mad_lib_design_2.continue_screen_bankran">
         </activity>
         <activity
-                android:name=".bankran"
-                android:screenOrientation="portrait">
-        </activity>
-        <activity
-                android:name=".jobbintervju"
+                android:name="com.jacob.spens1.mad_lib_design_2.bankran"
                 android:screenOrientation="portrait">
         </activity>
         <activity
-                android:name=".presskonferens"
+                android:name="com.jacob.spens1.mad_lib_design_2.jobbintervju"
                 android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".MainActivity">
+        <activity
+                android:name="com.jacob.spens1.mad_lib_design_2.presskonferens"
+                android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.jacob.spens1.mad_lib_design_2.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".choose_text">
+        <activity android:name="com.jacob.spens1.mad_lib_design_2.choose_text">
         </activity>
 
         <meta-data

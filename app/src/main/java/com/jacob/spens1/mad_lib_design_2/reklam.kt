@@ -1,20 +1,15 @@
-package com.example.spens.mad_lib_design_2
+package com.jacob.spens1.mad_lib_design_2
 
-import android.content.Context
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
-import kotlinx.android.synthetic.main.activity_bankran.*
 import android.app.Activity
 import android.app.AlertDialog
-import kotlinx.android.synthetic.main.activity_foretagspitch.*
 import android.content.DialogInterface
 import android.util.Log
 import kotlinx.android.synthetic.main.activity_reklam.*
-import kotlin.random.Random
 
 
 class reklam : AppCompatActivity() {

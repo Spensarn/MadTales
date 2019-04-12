@@ -1,11 +1,9 @@
-package com.example.spens.mad_lib_design_2
+package com.jacob.spens1.mad_lib_design_2
 
 import android.app.Activity
 import android.app.AlertDialog
 import android.content.DialogInterface
-import android.content.Intent
 import android.graphics.PorterDuff
-import android.graphics.Typeface
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -14,7 +12,6 @@ import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_dejt.*
-import kotlinx.android.synthetic.main.activity_two_player_test.*
 
 class dejt : AppCompatActivity() {
 
@@ -23,7 +20,7 @@ class dejt : AppCompatActivity() {
     var counter1 = 0
     var counter2 = 0
 
-    val random_generator = com.example.spens.mad_lib_design_2.random_generator()
+    val random_generator = com.jacob.spens1.mad_lib_design_2.random_generator()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

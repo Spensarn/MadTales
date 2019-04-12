@@ -1,4 +1,4 @@
-package com.example.spens.mad_lib_design_2
+package com.jacob.spens1.mad_lib_design_2
 
 import android.app.Activity
 import android.app.AlertDialog
@@ -8,15 +8,12 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.view.inputmethod.InputMethodManager
-import kotlinx.android.synthetic.main.activity_bankran.*
-import kotlinx.android.synthetic.main.activity_jakt.*
-import kotlinx.android.synthetic.main.activity_jobbintervju.*
 import kotlinx.android.synthetic.main.activity_presskonferens.*
 
 class presskonferens : AppCompatActivity() {
 
 
-    val random_generator = com.example.spens.mad_lib_design_2.random_generator()
+    val random_generator = com.jacob.spens1.mad_lib_design_2.random_generator()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

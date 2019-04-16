@@ -37,11 +37,10 @@ class foretagspitch : AppCompatActivity() {
 
         }
 
-        antal_ord_företagspitch.setText("Textläng: Lång" )
+        antal_ord_företagspitch.setText("Textlängd: Lång")
         var counter = 0
 
         spela_button_företagspitch.setOnClickListener {
-            //företagspitch_button.visibility = View.INVISIBLE
             progressBar_företagspitch.visibility = View.VISIBLE
             input_text_företagspitch.visibility = View.VISIBLE
             confirm_button_företagspitch.visibility = View.VISIBLE
@@ -50,8 +49,7 @@ class foretagspitch : AppCompatActivity() {
             antal_ord_företagspitch.visibility = View.INVISIBLE
             procent_dislike_företagspitch.visibility = View.INVISIBLE
             procent_like_företagspitch.visibility = View.INVISIBLE
-            //like_image_företagspitch.visibility = View.INVISIBLE
-            //dislike_image_företagspitch.visibility = View.INVISIBLE
+
 
             counter++
         }
@@ -85,11 +83,6 @@ class foretagspitch : AppCompatActivity() {
                 val imm = getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
                 imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY,0)
 
-
-                continue_button_företagspitch.setOnClickListener {
-                    val intent = Intent(this, continue_screen_bankran::class.java)
-                    startActivity(intent)
-                }
             }
 
         }

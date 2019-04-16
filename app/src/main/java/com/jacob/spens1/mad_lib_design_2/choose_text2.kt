@@ -17,19 +17,6 @@ class choose_text2 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_choose_text2)
 
-        /*buttonEffect(presskonferens_b)
-        buttonEffect(kärleksbrev)
-        buttonEffect(jobbintervju)
-        buttonEffect(bankrån)
-        buttonEffect(företagspitch)
-        buttonEffect(reklam)
-        buttonEffect(nyheter)
-        buttonEffect(matlagning)*/
-
-
-
-
-
         back_b.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)

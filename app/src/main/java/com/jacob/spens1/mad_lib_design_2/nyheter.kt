@@ -36,7 +36,7 @@ class nyheter : AppCompatActivity() {
 
         }
 
-        antal_ord_nyheter.setText("Textläng: Mellan" )
+        antal_ord_nyheter.setText("Textlängd: Mellan" )
         var counter = 0
 
         spela_button_nyheter.setOnClickListener {
@@ -46,8 +46,6 @@ class nyheter : AppCompatActivity() {
             spela_button_nyheter.visibility = View.INVISIBLE
             desc_text_nyheter.setText(array_nyheter[counter])
             antal_ord_nyheter.visibility = View.INVISIBLE
-            procent_dislike_nyheter.visibility = View.INVISIBLE
-            procent_like_nyheter.visibility = View.INVISIBLE
 
 
 

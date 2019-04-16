@@ -28,19 +28,7 @@
                 android:screenOrientation="portrait">
         </activity>
         <activity
-                android:name="com.jacob.spens1.mad_lib_design_2.lekprogram"
-                android:screenOrientation="portrait">
-        </activity>
-        <activity
-                android:name="com.jacob.spens1.mad_lib_design_2.klassatertraff"
-                android:screenOrientation="portrait">
-        </activity>
-        <activity
                 android:name="com.jacob.spens1.mad_lib_design_2.reklam"
-                android:screenOrientation="portrait">
-        </activity>
-        <activity
-                android:name="com.jacob.spens1.mad_lib_design_2.jakt"
                 android:screenOrientation="portrait">
         </activity>
         <activity
@@ -52,13 +40,9 @@
                 android:name="org.apache.http.legacy"
                 android:required="false"/>
 
-        <activity android:name="com.jacob.spens1.mad_lib_design_2.two_player_test">
-        </activity>
         <activity
                 android:name="com.jacob.spens1.mad_lib_design_2.foretagspitch"
                 android:screenOrientation="portrait">
-        </activity>
-        <activity android:name="com.jacob.spens1.mad_lib_design_2.continue_screen_bankran">
         </activity>
         <activity
                 android:name="com.jacob.spens1.mad_lib_design_2.bankran"
@@ -72,14 +56,13 @@
                 android:name="com.jacob.spens1.mad_lib_design_2.presskonferens"
                 android:screenOrientation="portrait">
         </activity>
-        <activity android:name="com.jacob.spens1.mad_lib_design_2.MainActivity">
+        <activity android:name="com.jacob.spens1.mad_lib_design_2.MainActivity"
+                    android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-        </activity>
-        <activity android:name="com.jacob.spens1.mad_lib_design_2.choose_text">
         </activity>
 
         <meta-data

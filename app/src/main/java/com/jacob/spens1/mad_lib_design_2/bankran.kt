@@ -52,10 +52,7 @@ val random_generator = com.jacob.spens1.mad_lib_design_2.random_generator()
             spela_button_bankrån.visibility = View.INVISIBLE
             desc_text_bankrån.setText(array_bankrån[counter])
             antal_ord_bankrån.visibility = View.INVISIBLE
-            procent_dislike_bankrån.visibility = View.INVISIBLE
-            procent_like_bankrån.visibility = View.INVISIBLE
-            like_image_bankrån.visibility = View.INVISIBLE
-            dislike_image_bankrån.visibility = View.INVISIBLE
+
 
 
 
@@ -87,13 +84,6 @@ val random_generator = com.jacob.spens1.mad_lib_design_2.random_generator()
 
                 val imm = getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
                 imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY,0)
-
-
-                continue_button.setOnClickListener {
-                    val intent = Intent(this, continue_screen_bankran::class.java)
-                    startActivity(intent)
-                }
-
 
             }
 

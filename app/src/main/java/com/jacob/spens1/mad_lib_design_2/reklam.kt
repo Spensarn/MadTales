@@ -43,7 +43,7 @@ class reklam : AppCompatActivity() {
 
         }
 
-        antal_ord_reklam.setText("Textläng: Kort" )
+        antal_ord_reklam.setText("Textlängd: Kort" )
         var counter = 0
 
         spela_button_reklam.setOnClickListener {
@@ -88,11 +88,6 @@ class reklam : AppCompatActivity() {
                 val imm = getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
                 imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY,0)
 
-
-                continue_button_reklam.setOnClickListener {
-                    val intent = Intent(this, continue_screen_bankran::class.java)
-                    startActivity(intent)
-                }
             }
 
         }

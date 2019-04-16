@@ -77,10 +77,6 @@ class presskonferens : AppCompatActivity() {
                 val imm = getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
                 imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY,0)
 
-                continue_button_presskonferens.setOnClickListener {
-                    val intent = Intent(this, continue_screen_bankran::class.java)
-                    startActivity(intent)
-                }
             }
         }
 

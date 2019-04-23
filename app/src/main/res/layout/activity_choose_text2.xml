@@ -19,7 +19,8 @@
             app:layout_constraintTop_toTopOf="parent" android:layout_marginEnd="8dp"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toTopOf="@+id/jobbintervju_b" app:layout_constraintVertical_bias="1.0"/>
+            app:layout_constraintBottom_toTopOf="@+id/jobbintervju_b" app:layout_constraintVertical_bias="1.0"
+            android:visibility="invisible"/>
     <ImageButton
             android:layout_width="111dp"
             android:layout_height="120dp" app:srcCompat="@drawable/bankran"
@@ -174,7 +175,8 @@
             app:layout_constraintVertical_bias="0.0"/>
     <ImageButton
             android:layout_width="111dp"
-            android:layout_height="120dp" app:srcCompat="@drawable/kommersnart"
+            android:layout_height="120dp"
+            app:srcCompat="@drawable/kommersnart"
             android:scaleType="fitXY"
             android:background="@null"
             android:id="@+id/nyheter_b7"

@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         //buttonEffect(start)
 
         start.setOnClickListener {
-            val intent = Intent(this, choose_text2::class.java)
+            val intent = Intent(this, choose_text::class.java)
             startActivity(intent)
         }
 

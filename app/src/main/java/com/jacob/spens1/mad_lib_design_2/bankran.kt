@@ -86,8 +86,6 @@ val random_generator = com.jacob.spens1.mad_lib_design_2.random_generator()
                 imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY,0)
 
             }
-
-
         }
 
     }

@@ -36,7 +36,7 @@ class karleksbrev : AppCompatActivity() {
 
         }
 
-        antal_ord_kärleksbrev.setText("Textläng: Mellan" )
+        antal_ord_kärleksbrev.setText("Textlängd: Mellan" )
         var counter = 0
 
         spela_button_kärleksbrev.setOnClickListener {

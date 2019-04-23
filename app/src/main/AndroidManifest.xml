@@ -9,30 +9,41 @@
             android:roundIcon="@drawable/litenlogga1"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name="com.jacob.spens1.mad_lib_design_2.start"
+        <activity android:name=".choose_text"
                   android:screenOrientation="portrait">
         </activity>
-        <activity android:name="com.jacob.spens1.mad_lib_design_2.choose_text2"
-                  android:screenOrientation="portrait">
+        <activity android:name="com.jacob.spens.mad_lib_design_2.choose_text">
+        </activity>
+        <activity android:name=".choose_textSlide">
+        </activity>
+        <activity android:name="com.jacob.spens.mad_lib_design_2.choose_textSlide">
         </activity>
         <activity
-                android:name="com.jacob.spens1.mad_lib_design_2.karleksbrev"
+                android:name=".start"
                 android:screenOrientation="portrait">
         </activity>
         <activity
-                android:name="com.jacob.spens1.mad_lib_design_2.nyheter"
+                android:name=".choose_text2"
                 android:screenOrientation="portrait">
         </activity>
         <activity
-                android:name="com.jacob.spens1.mad_lib_design_2.matlagning"
+                android:name=".karleksbrev"
                 android:screenOrientation="portrait">
         </activity>
         <activity
-                android:name="com.jacob.spens1.mad_lib_design_2.reklam"
+                android:name=".nyheter"
                 android:screenOrientation="portrait">
         </activity>
         <activity
-                android:name="com.jacob.spens1.mad_lib_design_2.dejt"
+                android:name=".matlagning"
+                android:screenOrientation="portrait">
+        </activity>
+        <activity
+                android:name=".reklam"
+                android:screenOrientation="portrait">
+        </activity>
+        <activity
+                android:name=".dejt"
                 android:screenOrientation="portrait">
         </activity>
 
@@ -41,23 +52,24 @@
                 android:required="false"/>
 
         <activity
-                android:name="com.jacob.spens1.mad_lib_design_2.foretagspitch"
+                android:name=".foretagspitch"
                 android:screenOrientation="portrait">
         </activity>
         <activity
-                android:name="com.jacob.spens1.mad_lib_design_2.bankran"
+                android:name=".bankran"
                 android:screenOrientation="portrait">
         </activity>
         <activity
-                android:name="com.jacob.spens1.mad_lib_design_2.jobbintervju"
+                android:name=".jobbintervju"
                 android:screenOrientation="portrait">
         </activity>
         <activity
-                android:name="com.jacob.spens1.mad_lib_design_2.presskonferens"
+                android:name=".presskonferens"
                 android:screenOrientation="portrait">
         </activity>
-        <activity android:name="com.jacob.spens1.mad_lib_design_2.MainActivity"
-                    android:screenOrientation="portrait">
+        <activity
+                android:name=".MainActivity"
+                android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

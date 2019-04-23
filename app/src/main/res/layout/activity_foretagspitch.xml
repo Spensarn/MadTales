@@ -9,8 +9,8 @@
 
     <TextView
             android:text="Företagspitch"
-            android:layout_width="197dp"
-            android:layout_height="34dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:id="@+id/textView2"
             android:textAllCaps="true" app:fontFamily="@font/andika" android:textSize="24sp"
             android:layout_marginEnd="8dp"
@@ -85,16 +85,18 @@
 
         <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/text_story_företagspitch" android:textSize="14sp"
+                android:layout_height="wrap_content"
+                android:id="@+id/text_story_företagspitch"
+                android:textSize="14sp"
                 android:textColor="@android:color/darker_gray"
                 app:fontFamily="@font/andika"
-                android:layout_marginBottom="63dp"
+                android:layout_marginBottom="62dp"
                 app:layout_constraintBottom_toBottomOf="parent" android:layout_marginTop="72dp"
                 app:layout_constraintTop_toTopOf="parent" android:layout_marginStart="15dp"
                 app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="15dp"
                 android:layout_marginEnd="17dp"
                 android:lineSpacingExtra="5dp"
+                android:autoSizeMinTextSize="10dp"
                 android:autoSizeTextType="uniform"
                 app:autoSizeStepGranularity="100sp"
                 app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="17dp"
@@ -153,7 +155,7 @@
             app:layout_constraintBottom_toBottomOf="parent"/>
     <TextView
             android:layout_width="206dp"
-            android:layout_height="74dp"
+            android:layout_height="wrap_content"
             android:id="@+id/tips_text_företagspitch" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="8dp"
             android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
